@@ -30,7 +30,7 @@
                             <td><img src="../../public/Admin/image/<?=$value['img']?>" alt="Có ảnh"></td>
                             <td>
                                 <a  href="./model/product/delete.php?id=<?=$value['id']?>"><button class="btn-danger rounded border border-danger" onclick="return confirm('Bạn có muốn xóa không?')">Xóa</button></a>
-                                <a href=""><button class="btn-danger rounded border border-danger">Sửa</button></a>
+                                <a href="./model/product/editproduct.php?id=<?=$value['id']?>"><button class="btn-danger rounded border border-danger">Sửa</button></a>
                             </td>
                         </tr>
                   <?php  }
