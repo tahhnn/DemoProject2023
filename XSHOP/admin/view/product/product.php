@@ -1,7 +1,11 @@
+<?php
+echo "<pre>";
+print_r($data_product);
+echo "</pre>";?>
 <h2 class="text-center p-2">
             Danh sách sản phẩm
 </h2>
-       <table class="table table-striped table-hover w-50 justify-content-center mx-auto">
+       <table class="table table-striped table-hover w-75 justify-content-center mx-auto">
             <thead>
                 <th>Mã loại</th>
                 <th>Tên sản phẩm</th>    
@@ -15,19 +19,19 @@
             </thead>
             <tbody>
                 <?php
-                    for($i=1;$i< count($data_product);$i++) { ?>
+                    foreach($data_product as $index => $value) { ?>
                         <tr>
-                            <td><?= $data_product[$i]['id']?></td>
-                            <td><?= $data_product[$i]['name']?></td>
-                            <td><?= $data_product[$i]['type_name']?></td>
-                            <td><?= $data_product[$i]['disc']?></td>
-                            <td><?= $data_product[$i]['price']?></td>
-                            <td><?= $data_product[$i]['status']?></td>
-                            <td><?= $data_product[$i]['discount']?></td>
-                            <td><?= $data_product[$i]['View']?></td>
-                            <td><img src="/XSHOP/html/./img/<?=$data_product[$i]['img']?>" alt=""></td>
+                            <td><?= $value['id'] ?></td>
+                            <td><?= $value['name']?></td>
+                            <td><?= $value['type_name']?></td>
+                            <td><?= $value['disc']?></td>
+                            <td><?= $value['price']?></td>
+                            <td><?= $value['status']?></td>
+                            <td><?= $value['discount']?></td>
+                            <td><?= $value['view']?></td>
+                            <td><img src="/XSHOP/html/./img/<?=$value['img']?>" alt=""></td>
                             <td>
-                                <a  href=""><button class="btn-danger rounded border border-danger" onclick="return confirm('Bạn có muốn xóa không?')">Xóa</button></a>
+                                <a  href="./product/delete.php?id=<?=$value['id']?>"><button class="btn-danger rounded border border-danger" onclick="return confirm('Bạn có muốn xóa không?')">Xóa</button></a>
                                 <a href=""><button class="btn-danger rounded border border-danger">Sửa</button></a>
                             </td>
                         </tr>

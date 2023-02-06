@@ -1,7 +1,6 @@
 <?php
+    include 'connect.php';
     include './model/loadProduct.php';
-?>
-<?php
     include './model/loadList_type.php';
     ?>
 <!DOCTYPE html>

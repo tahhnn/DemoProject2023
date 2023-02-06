@@ -9,13 +9,13 @@
             </thead>
             <tbody>
                 <?php
-                    for($i=1;$i< count($data);$i++) { ?>
+                    foreach($data as $key => $value) { ?>
                         <tr>
-                            <td><?= $data[$i]['id']?></td>
-                            <td><?= $data[$i]['name']?></td>
+                            <td><?= $value['id']?></td>
+                            <td><?= $value['name']?></td>
                             <td>
-                                <a  href="./list/delete.php?id=<?=$data[$i]['id']?>"><button class="btn-danger rounded border border-danger" onclick="return confirm('Bạn có muốn xóa không?')">Xóa</button></a>
-                                <a href="./list/edit.php?id=<?=$data[$i]['id']?>"><button class="btn-danger rounded border border-danger">Sửa</button></a>
+                                <a  href="./list/delete.php?id=<?=$value['id']?>"><button class="btn-danger rounded border border-danger" onclick="return confirm('Bạn có muốn xóa không?')">Xóa</button></a>
+                                <a href="./list/edit.php?id=<?=$value['id']?>"><button class="btn-danger rounded border border-danger">Sửa</button></a>
                             </td>
                         </tr>
                   <?php  }
