@@ -1,9 +1,7 @@
-<?php
-echo "<pre>";
-print_r($data_product);
-echo "</pre>";?>
+
 <h2 class="text-center p-2">
             Danh sách sản phẩm
+            
 </h2>
        <table class="table table-striped table-hover w-75 justify-content-center mx-auto">
             <thead>
@@ -29,9 +27,9 @@ echo "</pre>";?>
                             <td><?= $value['status']?></td>
                             <td><?= $value['discount']?></td>
                             <td><?= $value['view']?></td>
-                            <td><img src="/XSHOP/html/./img/<?=$value['img']?>" alt=""></td>
+                            <td><img src="../../public/Admin/image/<?=$value['img']?>" alt="Có ảnh"></td>
                             <td>
-                                <a  href="./product/delete.php?id=<?=$value['id']?>"><button class="btn-danger rounded border border-danger" onclick="return confirm('Bạn có muốn xóa không?')">Xóa</button></a>
+                                <a  href="./model/product/delete.php?id=<?=$value['id']?>"><button class="btn-danger rounded border border-danger" onclick="return confirm('Bạn có muốn xóa không?')">Xóa</button></a>
                                 <a href=""><button class="btn-danger rounded border border-danger">Sửa</button></a>
                             </td>
                         </tr>
@@ -40,5 +38,5 @@ echo "</pre>";?>
                
             </tbody>
        </table>
-       <a class="d-flex justify-content-center" style="text-decoration: none;" href=""><button type="button" class="btn btn-outline-warning">Thêm mới</button></a>
+       <a class="d-flex justify-content-center" style="text-decoration: none;" href="../admin/model/product/addproduct.php"><button type="button" class="btn btn-outline-warning">Thêm mới</button></a>
     </div>

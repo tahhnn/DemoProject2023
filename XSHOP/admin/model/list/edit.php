@@ -1,5 +1,5 @@
 <?php
-    include '../model/connect.php';
+    include '../connect.php';
     $id = $_GET['id'];
     $sql = "SELECT * FROM `type` WHERE `id`='$id'";
     $statement = $connect->prepare($sql);
