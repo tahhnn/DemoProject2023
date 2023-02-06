@@ -1,5 +1,5 @@
 <?php
-    include 'connect.php';
+    include './model/connect.php';
     include './model/loadProduct.php';
     include './model/loadList_type.php';
     ?>

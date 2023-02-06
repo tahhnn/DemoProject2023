@@ -1,5 +1,5 @@
 <?php
-    include './connect.php';
+    include '../model/connect.php';
 
     // select table type
     $sql_type = "SELECT * FROM `type`";

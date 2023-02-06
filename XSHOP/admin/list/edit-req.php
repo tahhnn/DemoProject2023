@@ -1,6 +1,6 @@
 
 <?php
-    include '../connect.php';
+    include '../model/connect.php';
     $id = isset($_POST['id']) ? $_POST['id'] : '';
     $name = isset($_POST['name']) ? $_POST['name'] : '';
     $sql_update = "UPDATE `type` SET `name` = '$name' WHERE `id`='$id'";
