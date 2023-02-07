@@ -29,9 +29,9 @@
     <header class="text-center bg-dark"><h2 class="text-light p-3">Admin</h2></header>
         <nav class="navbar navbar-expand-lg bg-light">
             <ul class="navbar-nav mx-auto">
-                <li class="nav-item border rounded-3 border-dark m-1 bg-light"><a class="text-dark nav-link active" href="admin-index.php">Danh mục</a></li>
-                <li class="nav-item border rounded-3 border-dark m-1 bg-light"><a class="text-dark nav-link active" href="../html/giaodien.html">Trang chủ</a></li>
-                <li class="nav-item border rounded-3 border-dark m-1 bg-light"><a class="text-dark nav-link active" href="">Hàng hóa</a></li>
+                <li class="nav-item border rounded-3 border-dark m-1 bg-light"><a class="text-dark nav-link active" href="../../index.php?act=list">Danh mục</a></li>
+                <li class="nav-item border rounded-3 border-dark m-1 bg-light"><a class="text-dark nav-link active" href="../../index.php">Trang chủ</a></li>
+                <li class="nav-item border rounded-3 border-dark m-1 bg-light"><a class="text-dark nav-link active" href="../../index.php?act=product">Hàng hóa</a></li>
                 <li class="nav-item border rounded-3 border-dark m-1 bg-light"><a class="text-dark nav-link active" href="">Khách hàng</a></li>
                 <li class="nav-item border rounded-3 border-dark m-1 bg-light"><a class="text-dark nav-link active" href="">Bình luận</a></li>
                 <li class="nav-item border rounded-3 border-dark m-1 bg-light"><a class="text-dark nav-link active" href="">Thống kê</a></li>

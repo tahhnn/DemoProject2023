@@ -45,43 +45,43 @@
                 <li class="nav-item border rounded-3 border-dark m-1 bg-light"><a class="text-dark nav-link active" href="../../index.php?act=">Thống kê</a></li>
             </ul>
         </nav>
-<h2>Thêm sản phẩm</h2>
-<form method="POST" enctype="multipart/form-data">
+<h2 class="text-center">Thêm sản phẩm</h2>
+<form class="w-50 mx-auto" method="POST" enctype="multipart/form-data">
     <div>
-        <label>Name</label>
-        <input type="text" name="name" required>
+        <label class="form-label fs-4">Name</label>
+        <input class="form-control" type="text" name="name" required>
     </div>
     <div>
-        <label>Image</label>
-        <input type="file" name="img">
+        <label class="form-label fs-4">Image</label>
+        <input class="form-control" type="file" name="img">
     </div>
     <div>
-        <label>Price</label>
-        <input type="text" name="price" required>
+        <label class="form-label fs-4">Price</label>
+        <input class="form-control" type="text" name="price" required>
     </div>
     <div>
-        <label>Disc</label>
-        <input type="text" name="disc" required>
+        <label class="form-label fs-4">Disc</label>
+        <input class="form-control" type="text" name="disc" required>
     </div>
     <div>
-        <label>Status</label>
-        <input type="text" name="status" required>
+        <label class="form-label fs-4">Status</label>
+        <input class="form-control" type="text" name="status" required>
     </div>
     <div>
-        <label>Discount</label>
-        <input type="text" name="discount" required>
+        <label class="form-label fs-4">Discount</label>
+        <input class="form-control" type="text" name="discount" required>
     </div>
     <div>
-        <label>View</label>
-        <input type="text" name="view" required>
+        <label class="form-label fs-4">View</label>
+        <input class="form-control" type="text" name="view" required>
     </div>
     <div>
-        <label>Thể loại</label>
-        <select name="id_type">
+        <label class="form-label fs-4">Thể loại</label>
+        <select class="form-control" name="id_type">
             <?php foreach ($kq as $row) {?>
                 <option value="<?php echo $row['id']; ?>"><?php echo $row['name']; ?></option>
             <?php } ?>
         </select>
     </div>
-    <button type="submit" name="btn_submit">Thêm</button>
+    <button class="btn btn-outline-warning my-3" type="submit" name="btn_submit">Thêm</button>
 </form>
