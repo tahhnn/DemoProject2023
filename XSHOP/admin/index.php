@@ -13,16 +13,10 @@
                 default:
                     include 'home.php';
                     break;
-            }
-            
+            }        
         }else{
+
         include 'home.php';
-        
-
     }
-
-
-
-    
     include 'footer.php';
 ?>

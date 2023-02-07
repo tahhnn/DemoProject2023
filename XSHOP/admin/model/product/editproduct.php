@@ -11,8 +11,9 @@
     $statement_type = $connect->prepare($sql_type);
     $statement_type->execute();
     $data_type = $statement_type->fetchAll();
+    
     ?>
-
+    
 <!DOCTYPE html>
 <html lang="en">
 <head>

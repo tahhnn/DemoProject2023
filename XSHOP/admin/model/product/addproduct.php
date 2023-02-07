@@ -4,22 +4,30 @@
     $sql="SELECT * FROM type";
     $kq=$connect->query($sql);
 
-    if (isset($_POST['btn_submit'])) {
-        $name=$_POST['name'];
+$name = $price = $disc = $status = $discount =$view ="";
+$err ="";
+    const REQUIRED_MSG = "*Cần nhập*";
+    if ($_SERVER["REQUEST_METHOD"] == "POST"){
+        if(empty($_POST['name']) || empty($_POST['price']) || empty($_POST['disc']) || empty($_POST['status']) || empty($_POST['discount']) || empty($_POST['view'])){
 
+            $err = REQUIRED_MSG;      
+    }else{
+        $name = $_POST['name'];
+        $price = $_POST['price'];
+        $disc = $_POST['disc'];
+        $status = $_POST['status'];
+        $discount = $_POST['discount'];
+        $view= $_POST['view'];
+
+    }
+}
+    if (isset($_POST['btn_submit']) && $err == "") {
+        
         $img=$_FILES['img']['name'];
         $img_tmp=$_FILES['img']['tmp_name'];
-        $price=$_POST['price'];
-        $disc=$_POST['disc'];
-        $status=$_POST['status'];
-        $discount=$_POST['discount'];
-        $view=$_POST['view'];
         $id_type=$_POST['id_type'];
-        $sql_add="INSERT INTO products (`name`, `img`, `price`, `disc`, `status`, `discount`, `view`, `id_type`) VALUES ('$name','$img',$price,'$disc','$status',$discount,$view,$id_type)";
-        $statement = $connect->prepare($sql_add);
-        $statement->execute();
-        move_uploaded_file($img_tmp,'../../public/Admin/image/'.$img);
-        header('location: ../../index.php?act=product');
+        include 'addproduct-req.php';
+    
     }
 ?>
 <!DOCTYPE html>
@@ -49,7 +57,8 @@
 <form class="w-50 mx-auto" method="POST" enctype="multipart/form-data">
     <div>
         <label class="form-label fs-4">Name</label>
-        <input class="form-control" type="text" name="name" required>
+        <input class="form-control" type="text" name="name" >
+        <span class="text-danger"><?=$err?></span>
     </div>
     <div>
         <label class="form-label fs-4">Image</label>
@@ -57,23 +66,28 @@
     </div>
     <div>
         <label class="form-label fs-4">Price</label>
-        <input class="form-control" type="text" name="price" required>
+        <input class="form-control" type="text" name="price" >
+        <span class="text-danger"><?=$err?></span>
     </div>
     <div>
         <label class="form-label fs-4">Disc</label>
-        <input class="form-control" type="text" name="disc" required>
+        <input class="form-control" type="text" name="disc" >
+        <span class="text-danger"><?=$err?></span>
     </div>
     <div>
         <label class="form-label fs-4">Status</label>
-        <input class="form-control" type="text" name="status" required>
+        <input class="form-control" type="text" name="status" >
+        <span class="text-danger"><?=$err?></span>
     </div>
     <div>
         <label class="form-label fs-4">Discount</label>
-        <input class="form-control" type="text" name="discount" required>
+        <input class="form-control" type="text" name="discount" >
+        <span class="text-danger"><?=$err?></span>
     </div>
     <div>
         <label class="form-label fs-4">View</label>
-        <input class="form-control" type="text" name="view" required>
+        <input class="form-control" type="text" name="view" >
+        <span class="text-danger"><?=$err?></span>
     </div>
     <div>
         <label class="form-label fs-4">Thể loại</label>
