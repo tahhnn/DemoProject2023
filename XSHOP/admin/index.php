@@ -1,22 +1,28 @@
 <?php
-    include 'header.php';
+    include './view/layout/html/header.php';
     //controller
     if (isset($_GET['act'])){
             $act = $_GET['act'];
             switch ($act){
-                case 'list':                    
-                    include './view/list/index_danhmuc.php';
+                case 'intro':                    
+                    include './index.php?act=intro';
                     break;
-                case 'product':                    
-                    include './view/product/product.php';
+                case 'contact':                    
+                    include './index.php?act=contact';
+                    break;
+                case 'anyquestion':                             
+                    include './index.php?act=anyquestion';
+                    break;
+                case 'gopy':                             
+                    include './index.php?act=gopy';
                     break;
                 default:
-                    include 'home.php';
+                    include './view/layout/html/home.php';
                     break;
             }        
         }else{
 
-        include 'home.php';
+        include './view/layout/html/home.php';
     }
-    include 'footer.php';
+    include './view/layout/html/footer.php';
 ?>
