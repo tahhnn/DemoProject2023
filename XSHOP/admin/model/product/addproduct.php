@@ -45,7 +45,7 @@ $err ="";
         <header class="text-center bg-dark"><h2 class="text-light p-3">Admin</h2></header>
         <nav class="navbar navbar-expand-lg bg-light">
             <ul class="navbar-nav mx-auto">
-                <li class="nav-item border rounded-3 border-dark m-1 bg-light"><a class="text-dark nav-link active" href=".../../../../public/Admin/html/index.php?act=list">Danh mục</a></li>
+                <li class="nav-item border rounded-3 border-dark m-1 bg-light"><a class="text-dark nav-link active" href=".../../../../public/Admin/html/index.php?act=listproduct">Danh mục</a></li>
                 <li class="nav-item border rounded-3 border-dark m-1 bg-light"><a class="text-dark nav-link active" href=".../../../../public/Admin/html/index.php">Trang chủ</a></li>
                 <li class="nav-item border rounded-3 border-dark m-1 bg-light"><a class="text-dark nav-link active" href=".../../../../public/Admin/html/index.php?act=product">Sản phẩm</a></li>
                 <li class="nav-item border rounded-3 border-dark m-1 bg-light"><a class="text-dark nav-link active" href=".../../../../public/Admin/html/index.php?act=customer">Khách hàng</a></li>

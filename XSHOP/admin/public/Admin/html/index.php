@@ -4,7 +4,7 @@
     if (isset($_GET['act'])){
             $act = $_GET['act'];
             switch ($act){
-                case 'list':                    
+                case 'listproduct':                    
                     include './list/index_danhmuc.php';
                     break;
                 case 'product':                    
@@ -14,6 +14,17 @@
                     include 'home.php';
                     break;
             }        
+
+
+
+
+
+
+
+
+
+
+
         }else{
 
         include 'home.php';

@@ -16,7 +16,7 @@
         $statement_update = $connect->prepare($sql_update);
         $statement_update->execute();
         
-    header('location:../../index.php?act=product');
+    header('location:../../public/Admin/html/index.php?act=product');
     
     
     ?>

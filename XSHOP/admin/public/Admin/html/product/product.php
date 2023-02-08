@@ -27,10 +27,10 @@
                             <td><?= $value['status']?></td>
                             <td><?= $value['discount']?></td>
                             <td><?= $value['view']?></td>
-                            <td><img src="../../public/Admin/image/<?=$value['img']?>" alt="Có ảnh"></td>
+                            <td><img class="img-thumbnail w-25" src="../image<?=$value['img']?>" alt="Có ảnh"></td>
                             <td>
-                                <a  href="./model/product/delete.php?id=<?=$value['id']?>"><button class="btn-danger rounded border border-danger" onclick="return confirm('Bạn có muốn xóa không?')">Xóa</button></a>
-                                <a href="./model/product/editproduct.php?id=<?=$value['id']?>"><button class="btn-danger rounded border border-danger">Sửa</button></a>
+                                <a  href="../../../model/product/delete.php?id=<?=$value['id']?>"><button class="btn-danger rounded border border-danger" onclick="return confirm('Bạn có muốn xóa không?')">Xóa</button></a>
+                                <a href="../../../model/product/editproduct.php?id=<?=$value['id']?>"><button class="btn-danger rounded border border-danger">Sửa</button></a>
                             </td>
                         </tr>
                   <?php  }
@@ -38,5 +38,5 @@
                
             </tbody>
        </table>
-       <a class="d-flex justify-content-center" style="text-decoration: none;" href="../admin/model/product/addproduct.php"><button type="button" class="btn btn-outline-warning">Thêm mới</button></a>
+       <a class="d-flex justify-content-center" style="text-decoration: none;" href="../../../model/product/addproduct.php"><button type="button" class="btn btn-outline-warning">Thêm mới</button></a>
     </div>

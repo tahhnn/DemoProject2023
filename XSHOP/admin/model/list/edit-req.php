@@ -9,7 +9,7 @@
         $statement_update = $connect->prepare($sql_update);
         $statement_update->execute();
         
-    header('location:../../index.php?act=list');
+    header('location:../../public/Admin/html/index.php?act=listproduct');
     
     
     ?>

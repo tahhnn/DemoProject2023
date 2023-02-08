@@ -4,5 +4,5 @@ include '../connect.php';
     $sql = "INSERT INTO `type` (name) VALUE ('$name')";
     $statement = $connect->prepare($sql);
     $statement->execute();
-header('location: ../../index.php?act=list')
+header('location: ../../public/Admin/html/index.php?act=listproduct')
 ?>
