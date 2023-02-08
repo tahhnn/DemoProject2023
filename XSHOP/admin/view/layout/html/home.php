@@ -3,11 +3,11 @@
             <div class="div-content-left">
                 <div class="div-slideshow" onclick=" slideshow()">
                     <div class="div-img">
-                        <img class="img-slide active" src="public/Admin/image/anh1.jpg" alt="">
-                        <img class="img-slide" src="public/Admin/image/anh2.jpg" alt="">
-                        <img class="img-slide" src="public/Admin/image/anh3.jpg" alt="">
-                        <img class="img-slide" src="public/Admin/image/anh4.jpg" alt="">
-                        <img class="img-slide" src="public/Admin/image/SIS-3-1200x1200.jpg.png" alt="">
+                        <img class="img-slide active" src="admin/public/Admin/image/anh1.jpg" alt="">
+                        <img class="img-slide" src="admin/public/Admin/image/anh2.jpg" alt="">
+                        <img class="img-slide" src="admin/public/Admin/image/anh3.jpg" alt="">
+                        <img class="img-slide" src="admin/public/Admin/image/anh4.jpg" alt="">
+                        <img class="img-slide" src="admin/public/Admin/image/SIS-3-1200x1200.jpg" alt="">
 
                     </div>
                 </div>
@@ -15,7 +15,7 @@
                     <div class="div-list r">
                         <div class="div-product">
                             <a href="demo-product.html">
-                                 <img class="div-img-product" src="public/Admin/image/anh1.jpg" alt="">
+                                 <img class="div-img-product" src="admin/public/Admin/image/anh1.jpg" alt="">
                             </a>
                             <span class="span-price" >150.000đ</span>
                             <a href="demo-product.html">
@@ -28,7 +28,7 @@
                     </div>
                     <div class="div-list rounded">
                         <div class="div-product">
-                            <img class="div-img-product" src="public/Admin/image/anh1.jpg" alt="">
+                            <img class="div-img-product" src="admin/public/Admin/image/anh1.jpg" alt="">
                             <span class="span-price">150.000đ</span>
                             <p class="p-name"> san pham 1</p>
                             <button class="button-buy btn border-5 border-secondary bg-gradient rounded rounded-pill">Đặt hàng</button>
@@ -36,7 +36,7 @@
                     </div>
                     <div class="div-list rounded">
                         <div class="div-product">
-                            <img class="div-img-product" src="public/Admin/image/anh1.jpg" alt="">
+                            <img class="div-img-product" src="admin/public/Admin/image/anh1.jpg" alt="">
                             <span class="span-price">150.000đ</span>
                             <p class="p-name"> san pham 1</p>
                             <button class="button-buy btn border-5 border-secondary bg-gradient rounded rounded-pill">Đặt hàng</button>
@@ -44,7 +44,7 @@
                     </div>
                     <div class="div-list rounded">
                         <div class="div-product">
-                            <img class="div-img-product" src="public/Admin/image/anh1.jpg" alt="">
+                            <img class="div-img-product" src="admin/public/Admin/image/anh1.jpg" alt="">
                             <span class="span-price">150.000đ</span>
                             <p class="p-name"> san pham 1</p>
                             <button class="button-buy btn border-5 border-secondary bg-gradient rounded rounded-pill">Đặt hàng</button>
@@ -52,7 +52,7 @@
                     </div>
                     <div class="div-list rounded">
                         <div class="div-product">
-                            <img class="div-img-product" src="public/Admin/image/anh1.jpg" alt="">
+                            <img class="div-img-product" src="admin/public/Admin/image/anh1.jpg" alt="">
                             <span class="span-price">150.000đ</span>
                             <p class="p-name"> san pham 1</p>
                             <button class="button-buy btn border-5 border-secondary bg-gradient rounded rounded-pill">Đặt hàng</button>
@@ -60,7 +60,7 @@
                     </div>
                     <div class="div-list rounded">
                         <div class="div-product">
-                            <img class="div-img-product" src="public/Admin/image/anh1.jpg" alt="">
+                            <img class="div-img-product" src="admin/public/Admin/image/anh1.jpg" alt="">
                             <span class="span-price">150.000đ</span>
                             <p class="p-name"> san pham 1</p>
                             <button class="button-buy btn border-5 border-secondary bg-gradient rounded rounded-pill">Đặt hàng</button>
@@ -116,7 +116,6 @@
             </div>
 
         </div>
-
     </div>
     <div class="THANH">
         <a href="../../../public/Admin/html/">ADMIN</a>
@@ -143,3 +142,4 @@
             tieptheo.classList.add('active')
         }, 1500);
     </script>
+    

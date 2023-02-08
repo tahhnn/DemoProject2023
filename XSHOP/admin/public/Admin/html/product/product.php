@@ -27,9 +27,9 @@
                             <td><?= $value['status']?></td>
                             <td><?= $value['discount']?></td>
                             <td><?= $value['view']?></td>
-                            <td><img class="img-thumbnail w-25" src="../image<?=$value['img']?>" alt="Có ảnh"></td>
+                            <td><img class="img-thumbnail w-25" src="../image/<?=$value['img']?>" alt="Có ảnh"></td>
                             <td>
-                                <a  href="../../../model/product/delete.php?id=<?=$value['id']?>"><button class="btn-danger rounded border border-danger" onclick="return confirm('Bạn có muốn xóa không?')">Xóa</button></a>
+                                <a  href="../../../model/product/delete.php?id=<?=$value['id']?>"><button class="btn-danger rounded border border-danger my-3" onclick="return confirm('Bạn có muốn xóa không?')">Xóa</button></a>
                                 <a href="../../../model/product/editproduct.php?id=<?=$value['id']?>"><button class="btn-danger rounded border border-danger">Sửa</button></a>
                             </td>
                         </tr>

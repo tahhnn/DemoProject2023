@@ -17,7 +17,7 @@
         <nav class="nav-navigation">
             <ul class="ul-navigation">
                 <li class="li-navigation">
-                    <a href=""> Trang chủ</a>
+                    <a href="index.php?act=home"> Trang chủ</a>
                 </li>
                 <li class="li-navigation">
                     <a href="">Giới thiệu </a>
