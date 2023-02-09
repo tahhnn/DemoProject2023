@@ -90,7 +90,7 @@
                         <p>
                             <a href=""> Quên mật khẩu </a>
                         </p>
-                        <p> <a href=""> Đăng kí thành viên </a>
+                        <p> <a href="index.php?act=new"> Đăng kí thành viên </a>
                         </p>
                 </div>
                 <div class="div-list">

@@ -16,6 +16,9 @@
                 case 'gopy':                             
                     include 'admin/index.php?act=gopy';
                     break;
+                case 'new':                             
+                    include 'admin/view/layout/html/register.php';
+                    break;
                 default:
                     include 'admin/view/layout/html/home.php';
                     break;
