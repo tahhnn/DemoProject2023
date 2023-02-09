@@ -1,4 +1,7 @@
-
+<?php
+    include 'admin/model/loadList_type.php';
+    include 'admin/model/loadProduct.php';
+?>
 <div class="div-content">
             <div class="div-content-left">
                 <div class="div-slideshow" onclick=" slideshow()">
@@ -96,22 +99,32 @@
                 <div class="div-list">
                     <header> DANH MỤC </header>
                     <ul class="ul-list">
-                        <li class="li-list"> <a href=""> Đồng hồ đeo tay</a></li>
-                        <hr>
-                        <li class="li-list"> <a href=""> Đồng hồ đeo tay</a></li>
-                        <hr>
-                        <li class="li-list"> <a href=""> Đồng hồ đeo tay</a></li>
-                        <hr>
-                        <li class="li-list"> <a href=""> Đồng hồ đeo tay</a></li>
-                        <hr>
-                        <li class="li-list"> <a href=""> Đồng hồ đeo tay</a></li>
-                        <hr>
+                      <?php
+                            foreach ($data as $key => $value){ ?>
+                                <li class="li-list"> <a href=""> <?=$value['name']?> </a></li>
+                                <hr>
+
+                    <?php        }
+                      
+                      ?>
+                        
                     </ul>
                     <input type="text" class="form-control" placeholder="tìm kiếm từ khóa " aria-label="Username"
                         aria-describedby="basic-addon1">
                 </div>
                 <div class="div-top">
                     <header> Top 10 yêu thích nhất </header>
+                    <ul class="ul-list">
+                      <?php
+                            foreach ($data_product as $key => $value){ ?>
+                                <li class="li-list"> <a href=""> <?=$value['name']?> </a></li>
+                                <hr>
+
+                    <?php        }
+                      
+                      ?>
+                        
+                    </ul>
                 </div>
             </div>
 
