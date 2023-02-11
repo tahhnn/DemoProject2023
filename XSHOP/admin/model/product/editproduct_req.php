@@ -3,7 +3,7 @@
     $id = isset($_POST['id']) ? $_POST['id'] : '';
     $name = isset($_POST['name']) ? $_POST['name'] : '';
     
-    $img = isset($_POST['$img']) ? $_POST['$img'] : '';
+    $img = isset($_FILES['$img']) ? $_FILES['$img'] : '';
     $price = isset($_POST['price']) ? $_POST['price'] : '';
     $disc = isset($_POST['disc']) ? $_POST['disc'] : '';
     $status = isset($_POST['status']) ? $_POST['status'] : '';

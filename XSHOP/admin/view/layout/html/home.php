@@ -15,60 +15,24 @@
                     </div>
                 </div>
                 <div class="div-product-main">
-                    <div class="div-list r">
+                    <?php
+                        foreach ( $data_product as $key => $val) { ?>
+                        
+                    <div class="div-list rounded">
                         <div class="div-product">
-                            <a href="demo-product.html">
-                                 <img class="div-img-product" src="admin/public/Admin/image/anh1.jpg" alt="">
+                            <a href="admin/view/layout/html/demo-product.php">
+                                 <img class="div-img-product" src="admin/public/Admin/image<?=$val['img']?>" alt="">
                             </a>
-                            <span class="span-price" >150.000đ</span>
-                            <a href="demo-product.html">
-                                <p class="p-name"> san pham 1</p>
+                            <span class="span-price" ><?=$val['price']?></span>
+                            <a href="admin/view/layout/html/demo-product.php">
+                                <p class="p-name"><?=$val['name']?></p>
                             </a>
-                            <a href="demo-product.html">
+                            <a href="admin/view/layout/html/demo-product.php">
                                 <button class="button-buy btn border-5 border-secondary bg-gradient rounded rounded-pill">Đặt hàng</button>
                             </a>
                         </div>
                     </div>
-                    <div class="div-list rounded">
-                        <div class="div-product">
-                            <img class="div-img-product" src="admin/public/Admin/image/anh1.jpg" alt="">
-                            <span class="span-price">150.000đ</span>
-                            <p class="p-name"> san pham 1</p>
-                            <button class="button-buy btn border-5 border-secondary bg-gradient rounded rounded-pill">Đặt hàng</button>
-                        </div>
-                    </div>
-                    <div class="div-list rounded">
-                        <div class="div-product">
-                            <img class="div-img-product" src="admin/public/Admin/image/anh1.jpg" alt="">
-                            <span class="span-price">150.000đ</span>
-                            <p class="p-name"> san pham 1</p>
-                            <button class="button-buy btn border-5 border-secondary bg-gradient rounded rounded-pill">Đặt hàng</button>
-                        </div>
-                    </div>
-                    <div class="div-list rounded">
-                        <div class="div-product">
-                            <img class="div-img-product" src="admin/public/Admin/image/anh1.jpg" alt="">
-                            <span class="span-price">150.000đ</span>
-                            <p class="p-name"> san pham 1</p>
-                            <button class="button-buy btn border-5 border-secondary bg-gradient rounded rounded-pill">Đặt hàng</button>
-                        </div>
-                    </div>
-                    <div class="div-list rounded">
-                        <div class="div-product">
-                            <img class="div-img-product" src="admin/public/Admin/image/anh1.jpg" alt="">
-                            <span class="span-price">150.000đ</span>
-                            <p class="p-name"> san pham 1</p>
-                            <button class="button-buy btn border-5 border-secondary bg-gradient rounded rounded-pill">Đặt hàng</button>
-                        </div>
-                    </div>
-                    <div class="div-list rounded">
-                        <div class="div-product">
-                            <img class="div-img-product" src="admin/public/Admin/image/anh1.jpg" alt="">
-                            <span class="span-price">150.000đ</span>
-                            <p class="p-name"> san pham 1</p>
-                            <button class="button-buy btn border-5 border-secondary bg-gradient rounded rounded-pill">Đặt hàng</button>
-                        </div>
-                    </div>
+                 <?php       }?>
                 </div>
                 <div class="div-button-list-product">
                     <button class="button-list-product p-2">1</button>
