@@ -4,6 +4,6 @@
     $sql_product = "SELECT * FROM products WHERE id = $id";
     $statement_product= $connect->prepare($sql_product);
     $statement_product->execute();
-    $data_product = $statement_product->fetch();
+    $data_1product = $statement_product->fetch();
   
 ?>

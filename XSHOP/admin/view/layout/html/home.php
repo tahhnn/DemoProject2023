@@ -14,24 +14,21 @@
 
                     </div>
                 </div>
-                <div class="div-product-main">
+                <div class="div-product-main row pt-3">
                     <?php
                         foreach ( $data_product as $key => $val) { ?>
                         
-                    <div class="div-list rounded">
-                        <div class="div-product">
-                            <a href="admin/view/layout/html/demo-product.php">
-                                 <img class="div-img-product" src="admin/public/Admin/image<?=$val['img']?>" alt="">
-                            </a>
-                            <span class="span-price" ><?=$val['price']?></span>
-                            <a href="admin/view/layout/html/demo-product.php">
-                                <p class="p-name"><?=$val['name']?></p>
-                            </a>
-                            <a href="admin/view/layout/html/demo-product.php">
-                                <button class="button-buy btn border-5 border-secondary bg-gradient rounded rounded-pill">Đặt hàng</button>
-                            </a>
-                        </div>
-                    </div>
+                        <div class="col-lg-4 col-sm-4">
+                              <div class="box_main">
+                                 <h4 class="shirt_text"><?=$val['name']?></h4>
+                                 <p class="price_text">Price  <span style="color: #262626;"><?=$val['price']?></span></p>
+                                 <div class="tshirt_img"><img width="120" src="admin/public/Admin/image/<?=$val['img']?>"></div>
+                                 <div class="btn_main">
+                                    <div class="buy_bt"><a href="#">Buy Now</a></div>
+                                    <div class="seemore_bt"><a href="admin/view/layout/html/demo-product.php?id=<?=$val['id']?>">See More</a></div>
+                                 </div>
+                              </div>
+                           </div>
                  <?php       }?>
                 </div>
                 <div class="div-button-list-product">
@@ -67,7 +64,6 @@
                             foreach ($data as $key => $value){ ?>
                                 <li class="li-list"> <a href=""> <?=$value['name']?> </a></li>
                                 <hr>
-
                     <?php        }
                       
                       ?>

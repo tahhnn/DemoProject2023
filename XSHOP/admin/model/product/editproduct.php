@@ -41,7 +41,7 @@
        <h2 class="text-center">
            Sửa sản phẩm
 </h2>  
-      <form class="w-50 mx-auto" method="POST" action="editproduct_req.php">
+      <form class="w-50 mx-auto" method="POST" action="editproduct_req.php" enctype="multipart/form-data">
   <div class="mb-3">
     <input type="text" name="id" class="form-control" id="list-id" value="<?= $data['id']?>" hidden>
     <label for="list-name" class="form-label fs-4">Tên sản phẩm</label>

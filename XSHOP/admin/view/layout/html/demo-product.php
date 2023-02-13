@@ -1,5 +1,7 @@
 <?php
 include '../../../model/load1product.php';
+include '../../../model/loadProduct.php';
+include '../../../model/loadList_type.php';
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +24,7 @@ include '../../../model/load1product.php';
         <nav class="nav-navigation">
             <ul class="ul-navigation">
                 <li class="li-navigation">
-                    <a href="admin/index.php?act=home"> Trang chủ</a>
+                    <a href="../../../../index.php?act=home"> Trang chủ</a>
                 </li>
                 <li class="li-navigation">
                     <a href="">Giới thiệu </a>
@@ -39,31 +41,30 @@ include '../../../model/load1product.php';
 
             </ul>
         </nav>
-    <!-- thêm sản phẩm vào phần này chú ý dùng fetch trong file model/load1product.php 
+        <!-- thêm sản phẩm vào phần này chú ý dùng fetch trong file model/load1product.php 
         Thêm đường dẫn tới trang chủ-->
-        <?php
-        foreach ($data_product as $key => $value) { ?>
-            <div class="div-content-left border border-2 rounded border-dark p-5 mt-2">
-                <img class="img-product mb-3 border" src="../../../public/Admin/image<?=$value['img']?>" alt="">
-                <div class="div-disc">
-
-                    <h3 class="h3-name">
-                        <?= $value['name'] ?>
-                    </h3>
-                    <ul class="ul-list-disc fs-4">
-                        <li class="li-list-disc"><?= $value['id_type'] ?></li>
-                        <li class="li-list-disc"><?= $value['disc'] ?></li>
-                        <li class="li-list-disc"><?= $value['price'] ?></li>
-                        <li class="li-list-disc"><?= $value['status'] ?></li>
-                        <li class="li-list-disc"><?= $value['discount'] ?></li>
-                        <li class="li-list-disc"><?= $value['view'] ?></li>
-
-                    </ul>
 
 
-                </div>
-            </div>
-        <?php      } ?>
+        <div class="div-content-left">
+        <div class="wrapper" style="background-color: #eee;">
+    <div class="product-img">
+      <img src="../../../public/Admin/image/<?=$data_1product['img']?>" height="420" width="327">
+    </div>
+    <div class="product-info">
+      <div class="product-text">
+        <h1><?=$data_1product['name']?></h1>
+        
+        <p><?=$data_1product['disc']?><br> <?=$data_1product['status']?>
+      </div>
+      <div class="product-price-btn">
+        <p><span>78</span>$</p>
+        <button type="button">buy now</button>
+      </div>
+    </div>
+  </div>
+            
+        </div>
+        
         <div class="div-right-content">
             <div class="div-login">
                 <header> TÀI KHOẢN </header>
@@ -82,24 +83,123 @@ include '../../../model/load1product.php';
             <div class="div-list">
                 <header> DANH MỤC </header>
                 <ul class="ul-list">
-                    <li class="li-list"> <a href=""> Đồng hồ đeo tay</a></li>
-                    <hr>
-                    <li class="li-list"> <a href=""> Đồng hồ đeo tay</a></li>
-                    <hr>
-                    <li class="li-list"> <a href=""> Đồng hồ đeo tay</a></li>
-                    <hr>
-                    <li class="li-list"> <a href=""> Đồng hồ đeo tay</a></li>
-                    <hr>
-                    <li class="li-list"> <a href=""> Đồng hồ đeo tay</a></li>
-                    <hr>
+                    <?php
+                    foreach ($data as $key => $value) { ?>
+                        <li class="li-list"> <a href=""> <?= $value['name'] ?> </a></li>
+                        <hr>
+
+                    <?php        }
+
+                    ?>
                 </ul>
                 <input type="text" class="form-control" placeholder="tìm kiếm từ khóa " aria-label="Username" aria-describedby="basic-addon1">
             </div>
             <div class="div-top">
                 <header> Top 10 yêu thích nhất </header>
+                <?php
+                foreach ($data_product as $keys => $values) { ?>
+                    <li class="li-list"> <a href=""> <?= $values['name'] ?> </a></li>
+                    <hr>
+
+                <?php        }
+
+                ?>
             </div>
         </div>
+        <div class="div-content-left ">
+        <section class="gradient-custom">
+  <div class="container my-5 py-5">
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-12 col-lg-10 col-xl-8">
+        <div class="card">
+          <div class="card-body p-4">
+            <h4 class="text-center mb-4 pb-2">Bình Luận gần đây</h4>
+
+            <div class="row">
+              <div class="col">
+                <div class="d-flex flex-start">
+                  <img class="rounded-circle shadow-1-strong me-3"
+                    src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(10).webp" alt="avatar" width="65"
+                    height="65" />
+                  <div class="flex-grow-1 flex-shrink-1">
+                    <div>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <p class="mb-1">
+                          Name1 <span class="small">- 2 hours ago</span>
+                        </p>
+                        <a href="#!"><i class="fas fa-reply fa-xs"></i><span class="small"> reply</span></a>
+                      </div>
+                      <p class="small mb-0">
+                        It is a long established fact that a reader will be distracted by
+                        the readable content of a page.
+                      </p>
+                    </div>
+
+                    <div class="d-flex flex-start mt-4">
+                      <a class="me-3" href="#">
+                        <img class="rounded-circle shadow-1-strong"
+                          src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(11).webp" alt="avatar"
+                          width="65" height="65" />
+                      </a>
+                      <div class="flex-grow-1 flex-shrink-1">
+                        <div>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <p class="mb-1">
+                              Simona Disa <span class="small">- 3 hours ago</span>
+                            </p>
+                          </div>
+                          <p class="small mb-0">
+                            letters, as opposed to using 'Content here, content here',
+                            making it look like readable English.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="d-flex flex-start mt-4">
+                      <a class="me-3" href="#">
+                        <img class="rounded-circle shadow-1-strong"
+                          src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(32).webp" alt="avatar"
+                          width="65" height="65" />
+                      </a>
+                      <div class="flex-grow-1 flex-shrink-1">
+                        <div>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <p class="mb-1">
+                              John Smith <span class="small">- 4 hours ago</span>
+                            </p>
+                          </div>
+                          <p class="small mb-0">
+                            the majority have suffered alteration in some form, by
+                            injected humour, or randomised words.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <form class="form-cmt" action="" method="post">
+                    <label class="form-label" for="">Bình luận của bạn :</label>
+                        <input class="form-control mb-3" type="text" placeholder="Comment.....">
+                        <button class="btn btn-primary" type="submit">Gửi</button>
+                    </form>
+              </div>
+              
+            </div>
+            
+          </div>
+          
+        </div>
+        
+      </div>
+      
     </div>
+    
+  </div>
+  
+</section>
+            
+        </div>
     </div>
 </body>
 
