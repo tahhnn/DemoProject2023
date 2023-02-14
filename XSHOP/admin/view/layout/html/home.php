@@ -32,11 +32,11 @@
                  <?php       }?>
                 </div>
                 <div class="div-button-list-product">
-                    <button class="button-list-product p-2">1</button>
-                    <button class="button-list-product p-2">2</button>
-                    <button class="button-list-product p-2">3</button>
-                    <button class="button-list-product p-2">></button>
-                    <button class="button-list-product p-2">>></button>
+                    <button class="button-list-product p-2 btn btn-success">1</button>
+                    <button class="button-list-product p-2 btn btn-primary">2</button>
+                    <button class="button-list-product p-2 btn btn-primary">3</button>
+                    <button class="button-list-product p-2 btn btn-primary">></button>
+                    <button class="button-list-product p-2 btn btn-primary">>></button>
                 </div>
             </div>
 
@@ -90,10 +90,6 @@
 
         </div>
     </div>
-    <div class="THANH">
-        <a href="../../../public/Admin/html/">ADMIN</a>
-    </div>
-
     <script>
         function slideshow() {
             var hinhanh = [];
