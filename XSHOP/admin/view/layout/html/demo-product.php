@@ -57,7 +57,7 @@ include '../../../model/loadList_type.php';
         <p><?=$data_1product['disc']?><br> <?=$data_1product['status']?>
       </div>
       <div class="product-price-btn">
-        <p><span>78</span>$</p>
+        <p><span><?=$data_1product['price']?></span>₫</p>
         <button type="button">buy now</button>
       </div>
     </div>

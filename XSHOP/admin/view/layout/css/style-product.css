@@ -167,9 +167,11 @@ a{
   }
   
   .product-price-btn p {
+    
     display: inline-block;
     position: absolute;
-    top: -13px;
+    top: 0px;
+    left: -20px;
     height: 50px;
     font-family: 'Trocchi', serif;
     margin: 0 0 0 38px;
