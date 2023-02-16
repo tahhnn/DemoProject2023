@@ -11,11 +11,11 @@
                 <?php
                     foreach($data as $key => $value) { ?>
                         <tr>
-                            <td><?= $value['id']?></td>
+                            <td><?= $value['id_type']?></td>
                             <td><?= $value['name']?></td>
                             <td>
-                                <a  href="../../../model/list/delete.php?id=<?=$value['id']?>"><button class="btn-danger rounded border border-danger" onclick="return confirm('Bạn có muốn xóa không?')">Xóa</button></a>
-                                <a href="../../../model/list/edit.php?id=<?=$value['id']?>"><button class="btn-danger rounded border border-danger">Sửa</button></a>
+                                <a  href="../../../model/list/delete.php?id_type=<?=$value['id_type']?>"><button class="btn-danger rounded border border-danger" onclick="return confirm('Bạn có muốn xóa không?')">Xóa</button></a>
+                                <a href="../../../model/list/edit.php?id_type=<?=$value['id_type']?>"><button class="btn-danger rounded border border-danger">Sửa</button></a>
                             </td>
                         </tr>
                   <?php  }

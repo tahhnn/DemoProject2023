@@ -19,7 +19,7 @@
                 <?php
                     foreach($data_product as $index => $value) { ?>
                         <tr>
-                            <td><?= $value['id'] ?></td>
+                            <td><?= $value['id_product'] ?></td>
                             <td><?= $value['name']?></td>
                             <td><?= $value['type_name']?></td>
                             <td><?= $value['disc']?></td>
@@ -29,8 +29,8 @@
                             <td><?= $value['view']?></td>
                             <td><img class="img-thumbnail w-25" src="../image/<?=$value['img']?>" alt="Có ảnh"></td>
                             <td>
-                                <a  href="../../../model/product/delete.php?id=<?=$value['id']?>"><button class="btn-danger rounded border border-danger my-3" onclick="return confirm('Bạn có muốn xóa không?')">Xóa</button></a>
-                                <a href="../../../model/product/editproduct.php?id=<?=$value['id']?>"><button class="btn-danger rounded border border-danger">Sửa</button></a>
+                                <a  href="../../../model/product/delete.php?id_product=<?=$value['id_product']?>"><button class="btn-danger rounded border border-danger my-3" onclick="return confirm('Bạn có muốn xóa không?')">Xóa</button></a>
+                                <a href="../../../model/product/editproduct.php?id_product=<?=$value['id_product']?>"><button class="btn-danger rounded border border-danger">Sửa</button></a>
                             </td>
                         </tr>
                   <?php  }

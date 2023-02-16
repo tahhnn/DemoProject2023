@@ -43,7 +43,7 @@
 </h2>  
       <form class="w-50 mx-auto" method="POST" action="editproduct_req.php" enctype="multipart/form-data">
   <div class="mb-3">
-    <input type="text" name="id" class="form-control" id="list-id" value="<?= $data['id']?>" hidden>
+    <input type="text" name="id" class="form-control" id="list-id" value="<?= $data['id_product']?>" hidden>
     <label for="list-name" class="form-label fs-4">Tên sản phẩm</label>
     <input type="text" name="name" class="form-control" id="list-name" value="<?= $data['name']?>">
     <label for="list-name" class="form-label fs-4">Tên loại</label>
@@ -51,7 +51,7 @@
     <select name="id_type">
         
             <?php foreach ($data_type as $row) {?>
-                <option value="<?php echo $row['id']; ?>"><?php echo $row['name']; ?></option>
+                <option value="<?php echo $row['id_type']; ?>"><?php echo $row['name']; ?></option>
             <?php } ?>
         </select>
         <br>

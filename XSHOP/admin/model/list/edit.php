@@ -1,7 +1,7 @@
 <?php
     include '../connect.php';
     $id = $_GET['id'];
-    $sql = "SELECT * FROM `type` WHERE `id`='$id'";
+    $sql = "SELECT * FROM `type` WHERE `id_type`='$id'";
     $statement = $connect->prepare($sql);
     $statement->execute();
     
@@ -38,7 +38,7 @@
 </h2>  
       <form class="w-50 mx-auto" method="POST" action="edit-req.php">
   <div class="mb-3">
-    <input type="text" name="id" class="form-control" id="list-id" value="<?= $data['id']?>" hidden>
+    <input type="text" name="id" class="form-control" id="list-id" value="<?= $data['id_type']?>" hidden>
     <label for="list-name" class="form-label fs-4">Tên loại</label>
  
     <input type="text" name="name" class="form-control" id="list-name" value="<?= $data['name']?>">

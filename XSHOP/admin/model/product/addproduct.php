@@ -93,7 +93,7 @@ $err ="";
         <label class="form-label fs-4">Thể loại</label>
         <select class="form-control" name="id_type">
             <?php foreach ($kq as $row) {?>
-                <option value="<?php echo $row['id']; ?>"><?php echo $row['name']; ?></option>
+                <option value="<?php echo $row['id_type']; ?>"><?php echo $row['name']; ?></option>
             <?php } ?>
         </select>
     </div>

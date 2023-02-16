@@ -11,13 +11,13 @@ $statement->setFetchMode(PDO::FETCH_ASSOC);
 $data_comment = $statement->fetchAll();
 
 foreach ($data_comment as $key => $value) {
-    if ($value['guest_id'] == null) {
+    if ($value['id_guest'] == null) {
         $comments[$key] = $value;
     }
 }
 
 foreach ($data_comment as $key => $value) {
-    echo !empty($value['guest_id']);
+    echo !empty($value['id_guest']);
     // if (!empty($value['guest_id']) == 1) {
     //     foreach ($comments as $a => $item) {
     //         // $comments[$a]['guest'] = $value;

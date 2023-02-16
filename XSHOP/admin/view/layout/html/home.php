@@ -25,7 +25,7 @@
                                  <div class="tshirt_img"><img width="120" src="admin/public/Admin/image/<?=$val['img']?>"></div>
                                  <div class="btn_main">
                                     <div class="buy_bt"><a href="#">Buy Now</a></div>
-                                    <div class="seemore_bt"><a href="admin/view/layout/html/demo-product.php?id=<?=$val['id']?>">See More</a></div>
+                                    <div class="seemore_bt"><a href="admin/view/layout/html/demo-product.php?id_product=<?=$val['id_product']?>">See More</a></div>
                                  </div>
                               </div>
                            </div>
