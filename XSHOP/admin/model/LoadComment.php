@@ -1,31 +1,18 @@
 <?php
-include 'connect.php';
-$sql_comment = "SELECT * FROM `comments`";
-$statement = $connect->prepare($sql_comment);
-$statement->execute();
-// $data_comment = $statement->fetchAll(PDO::FETCH_ASSOC);
-// Khai báo fetch kiểu mảng kết hợp
-$statement->setFetchMode(PDO::FETCH_ASSOC);
+     include 'connect.php';
+     $id = $_GET['id_product'];
+     $sql_products = "SELECT `prd_name` FROM products WHERE id_product = $id";
+     $statement_products= $connect->prepare($sql_products);
+     $statement_products->execute();
+     $data_1products = $statement_products->fetch();
+     $product_name = $data_1products['prd_name'];
+    $sql_comment = "SELECT name, comment, prd_name FROM comments 
+    INNER JOIN products INNER JOIN guest ON products.id_product = comments.id_product AND guest.id_guest = comments.id_guest 
+    WHERE prd_name LIKE '%$product_name%' ORDER BY id_comment DESC LIMIT 3";
 
-// Lấy danh sách kết quả
-$data_comment = $statement->fetchAll();
+    
+    $statement_cmt = $connect->prepare($sql_comment);
+    $statement_cmt->execute();
+    $comment = $statement_cmt->fetch();
 
-foreach ($data_comment as $key => $value) {
-    if ($value['id_guest'] == null) {
-        $comments[$key] = $value;
-    }
-}
-
-foreach ($data_comment as $key => $value) {
-    echo !empty($value['id_guest']);
-    // if (!empty($value['guest_id']) == 1) {
-    //     foreach ($comments as $a => $item) {
-    //         // $comments[$a]['guest'] = $value;
-    //         array_push($comments[$a], $value);
-    //     }
-    // }
-}
-
-// echo '<pre>';
-// print_r($comments);
-// echo '<pre>';
+?>

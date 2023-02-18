@@ -20,7 +20,7 @@
     $view = isset($_POST['view']) ? $_POST['view'] : '';
     $discount = isset($_POST['discount']) ? $_POST['discount'] : '';
     $id_type = isset($_POST['id_type']) ? $_POST['id_type'] : '';
-    $sql_update = "UPDATE `products` SET `name` = '$name',`img` = '$img',`price` = '$price',`disc` = '$disc',`status` = '$status',`view` = '$view' ,`id_type` = '$id_type' WHERE `id_product`='$id'";
+    $sql_update = "UPDATE `products` SET `prd_name` = '$name',`img` = '$img',`price` = '$price',`disc` = '$disc',`status` = '$status',`view` = '$view' ,`id_type` = '$id_type' WHERE `id_product`='$id'";
  
     $statement_update = $connect->prepare($sql_update);
         $statement_update->execute();

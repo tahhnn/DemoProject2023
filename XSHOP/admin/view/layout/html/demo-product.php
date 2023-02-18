@@ -2,6 +2,7 @@
 include '../../../model/load1product.php';
 include '../../../model/loadProduct.php';
 include '../../../model/loadList_type.php';
+include_once '../../../model/LoadComment.php';
 ?>
 
 <!DOCTYPE html>
@@ -52,7 +53,7 @@ include '../../../model/loadList_type.php';
     </div>
     <div class="product-info">
       <div class="product-text">
-        <h1><?=$data_1product['name']?></h1>
+        <h1><?=$data_1product['prd_name']?></h1>
         
         <p><?=$data_1product['disc']?><br> <?=$data_1product['status']?>
       </div>
@@ -98,7 +99,7 @@ include '../../../model/loadList_type.php';
                 <header> Top 10 yêu thích nhất </header>
                 <?php
                 foreach ($data_product as $keys => $values) { ?>
-                    <li class="li-list"> <a href=""> <?= $values['name'] ?> </a></li>
+                    <li class="li-list"> <a href=""> <?= $values['prd_name'] ?> </a></li>
                     <hr>
 
                 <?php        }
@@ -112,75 +113,29 @@ include '../../../model/loadList_type.php';
     <div class="row d-flex justify-content-center">
       <div class="col-md-12 col-lg-10 col-xl-8">
         <div class="card">
-          <div class="card-body p-4">
-            <h4 class="text-center mb-4 pb-2">Bình Luận gần đây</h4>
+          <div class="card-body p-4" style="width: 800px;">
+            <h4>Bình Luận gần đây</h4>
 
             <div class="row">
               <div class="col">
                 <div class="d-flex flex-start">
-                  <img class="rounded-circle shadow-1-strong me-3"
-                    src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(10).webp" alt="avatar" width="65"
-                    height="65" />
+                 
                   <div class="flex-grow-1 flex-shrink-1">
                     <div>
                       <div class="d-flex justify-content-between align-items-center">
                         <p class="mb-1">
-                          Name1 <span class="small">- 2 hours ago</span>
+                          <?=$comment['name']?> <span class="small"></span>
                         </p>
-                        <a href="#!"><i class="fas fa-reply fa-xs"></i><span class="small"> reply</span></a>
                       </div>
                       <p class="small mb-0">
-                        It is a long established fact that a reader will be distracted by
-                        the readable content of a page.
+                        <?=$comment['comment']?>
                       </p>
-                    </div>
-
-                    <div class="d-flex flex-start mt-4">
-                      <a class="me-3" href="#">
-                        <img class="rounded-circle shadow-1-strong"
-                          src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(11).webp" alt="avatar"
-                          width="65" height="65" />
-                      </a>
-                      <div class="flex-grow-1 flex-shrink-1">
-                        <div>
-                          <div class="d-flex justify-content-between align-items-center">
-                            <p class="mb-1">
-                              Simona Disa <span class="small">- 3 hours ago</span>
-                            </p>
-                          </div>
-                          <p class="small mb-0">
-                            letters, as opposed to using 'Content here, content here',
-                            making it look like readable English.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="d-flex flex-start mt-4">
-                      <a class="me-3" href="#">
-                        <img class="rounded-circle shadow-1-strong"
-                          src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(32).webp" alt="avatar"
-                          width="65" height="65" />
-                      </a>
-                      <div class="flex-grow-1 flex-shrink-1">
-                        <div>
-                          <div class="d-flex justify-content-between align-items-center">
-                            <p class="mb-1">
-                              John Smith <span class="small">- 4 hours ago</span>
-                            </p>
-                          </div>
-                          <p class="small mb-0">
-                            the majority have suffered alteration in some form, by
-                            injected humour, or randomised words.
-                          </p>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
                 <form class="form-cmt" action="" method="post">
-                    <label class="form-label" for="">Bình luận của bạn :</label>
-                        <input class="form-control mb-3" type="text" placeholder="Comment.....">
+                    <label class="form-label pt-4" for="">Bình luận của bạn :</label>
+                        <input class="form-control mb-3" style="width: 300px;" type="text" placeholder="Comment.....">
                         <button class="btn btn-primary" type="submit">Gửi</button>
                     </form>
               </div>

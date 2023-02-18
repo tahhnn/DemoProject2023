@@ -1,6 +1,7 @@
 <?php
     include 'admin/model/loadList_type.php';
     include 'admin/model/loadProduct.php';
+    
 ?>
 <div class="div-content">
             <div class="div-content-left">
@@ -20,11 +21,11 @@
                         
                         <div class="col-lg-4 col-sm-4">
                               <div class="box_main">
-                                 <h4 class="shirt_text"><?=$val['name']?></h4>
+                                 <h4 class="shirt_text"><?=$val['prd_name']?></h4>
                                  <p class="price_text">Price  <span style="color: #262626;"><?=$val['price']?></span></p>
                                  <div class="tshirt_img"><img width="120" src="admin/public/Admin/image/<?=$val['img']?>"></div>
                                  <div class="btn_main">
-                                    <div class="buy_bt"><a href="#">Buy Now</a></div>
+                                    <div class="buy_bt"><a href="admin/view/layout/html/loadCmt.php?id_product=<?=$val['id_product']?>">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="admin/view/layout/html/demo-product.php?id_product=<?=$val['id_product']?>">See More</a></div>
                                  </div>
                               </div>
@@ -77,7 +78,7 @@
                     <ul class="ul-list">
                       <?php
                             foreach ($data_product as $key => $value){ ?>
-                                <li class="li-list"> <a href=""> <?=$value['name']?> </a></li>
+                                <li class="li-list"> <a href=""> <?=$value['prd_name']?> </a></li>
                                 <hr>
 
                     <?php        }

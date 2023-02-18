@@ -45,7 +45,7 @@
   <div class="mb-3">
     <input type="text" name="id" class="form-control" id="list-id" value="<?= $data['id_product']?>" hidden>
     <label for="list-name" class="form-label fs-4">Tên sản phẩm</label>
-    <input type="text" name="name" class="form-control" id="list-name" value="<?= $data['name']?>">
+    <input type="text" name="name" class="form-control" id="list-name" value="<?= $data['prd_name']?>">
     <label for="list-name" class="form-label fs-4">Tên loại</label>
     <br>
     <select name="id_type">

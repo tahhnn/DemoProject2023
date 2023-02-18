@@ -20,7 +20,7 @@
                     foreach($data_product as $index => $value) { ?>
                         <tr>
                             <td><?= $value['id_product'] ?></td>
-                            <td><?= $value['name']?></td>
+                            <td><?= $value['prd_name']?></td>
                             <td><?= $value['type_name']?></td>
                             <td><?= $value['disc']?></td>
                             <td><?= $value['price']?></td>
