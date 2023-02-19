@@ -121,21 +121,27 @@ include_once '../../../model/LoadComment.php';
                 <div class="d-flex flex-start">
                  
                   <div class="flex-grow-1 flex-shrink-1">
-                    <div>
+                    <?php
+                      foreach ($comment as $key => $value) { ?>
+                        <div>
                       <div class="d-flex justify-content-between align-items-center">
                         <p class="mb-1">
-                          <?=$comment['name']?> <span class="small"></span>
+                        <?=$value['name']?> <span class="small"></span>
                         </p>
                       </div>
                       <p class="small mb-0">
-                        <?=$comment['comment']?>
+                        <?=$value['comment']?>
                       </p>
                     </div>
+                    <hr width="400px">
+                   <?php   } ?>
+                    
                   </div>
                 </div>
-                <form class="form-cmt" action="" method="post">
+                <form class="form-cmt" action="../../../model/comment/addcmt.php" method="post">
+                  <input type="text" name="id_product" value="<?=$data_1product['id_product']?>" hidden>
                     <label class="form-label pt-4" for="">Bình luận của bạn :</label>
-                        <input class="form-control mb-3" style="width: 300px;" type="text" placeholder="Comment.....">
+                        <input class="form-control mb-3" name="comment" style="width: 300px;" type="text" placeholder="Comment.....">
                         <button class="btn btn-primary" type="submit">Gửi</button>
                     </form>
               </div>

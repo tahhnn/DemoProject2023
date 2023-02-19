@@ -10,6 +10,9 @@
                 case 'product':                    
                     include './product/product.php';
                     break;
+                case 'comment':
+                    include './cmt/comment.php';
+                    break;
                 default:
                     include 'home.php';
                     break;
