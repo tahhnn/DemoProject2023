@@ -3,7 +3,7 @@
     include '../loadProduct.php';
     $id = isset($_POST['id_product']) ? $_POST['id_product'] : '';
  
-    $name = isset($_POST['name']) ? $_POST['name'] : '';
+    $name = isset($_POST['prd_name']) ? $_POST['prd_name'] : '';
     if ($_FILES['img']['name'] == '') {
         # code...
         $img=$data_product['img'];

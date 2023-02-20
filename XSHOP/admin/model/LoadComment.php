@@ -1,8 +1,8 @@
 <?php
      include 'connect.php';
      $id_prd = $_GET['id_product'];
-     $sql_products = "SELECT `prd_name` FROM products WHERE id_product = $id_prd";
-     $statement_products= $connect->prepare($sql_products);
+     $get_products = "SELECT `prd_name` FROM products WHERE id_product = $id_prd";
+     $statement_products= $connect->prepare($get_products);
      $statement_products->execute();
      $data_1products = $statement_products->fetch();
      $product_name = $data_1products['prd_name'];

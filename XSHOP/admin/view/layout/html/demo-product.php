@@ -72,7 +72,6 @@ include_once '../../../model/LoadComment.php';
                 <form action="">
                     <p>Tên đăng nhập <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1"> </p>
                     <p> Mật khẩu <input type="text" class="form-control" placeholder="password" aria-label="Username" aria-describedby="basic-addon1"> </p>
-
                     <p class="form-control"> <input class="input-checkbox" type="checkbox" name="" id="">Ghi nhớ tài khoản</p>
                     <button type="submit" class="button-login ">Đăng Nhập </button>
                     <p>
@@ -99,7 +98,7 @@ include_once '../../../model/LoadComment.php';
                 <header> Top 10 yêu thích nhất </header>
                 <?php
                 foreach ($data_product as $keys => $values) { ?>
-                    <li class="li-list"> <a href=""> <?= $values['prd_name'] ?> </a></li>
+                    <li class="li-list" style="padding: 10px;"><a style="padding: 10px" href=""><?=$values['prd_name']?></a></li>
                     <hr>
 
                 <?php        }
@@ -138,14 +137,14 @@ include_once '../../../model/LoadComment.php';
                     
                   </div>
                 </div>
-                <form class="form-cmt" action="../../../model/comment/addcmt.php" method="post">
-                  <input type="text" name="id_product" value="<?=$data_1product['id_product']?>" hidden>
+                <form class="form-cmt" action="../../../model/comment/addcmt.php" method="POST" enctype="multipart/form-data">
+                    <input type="text" name="id_product" value="<?=$data_1product['id_product']?>" hidden>
                     <label class="form-label pt-4" for="">Bình luận của bạn :</label>
-                        <input class="form-control mb-3" name="comment" style="width: 300px;" type="text" placeholder="Comment.....">
+                        <input class="form-control mb-3" name="content" style="width: 300px;" type="text" placeholder="Comment.....">
                         <button class="btn btn-primary" type="submit">Gửi</button>
                     </form>
+                    
               </div>
-              
             </div>
             
           </div>

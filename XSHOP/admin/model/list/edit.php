@@ -1,6 +1,6 @@
 <?php
     include '../connect.php';
-    $id = $_GET['id'];
+    $id = $_GET['id_type'];
     $sql = "SELECT * FROM `type` WHERE `id_type`='$id'";
     $statement = $connect->prepare($sql);
     $statement->execute();

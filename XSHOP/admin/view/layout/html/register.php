@@ -23,6 +23,8 @@ if (isset($_POST['registerBtn'])){
                 aria-label="Username" aria-describedby="basic-addon1" name="name"> </p>
         <p> Mật khẩu <input type="password" class="form-control" placeholder="password"
                 aria-label="Username" name="pwd" aria-describedby="basic-addon1"> </p>
+        <p> Mật khẩu <input type="checkbox" class="form-control" placeholder="password"
+                aria-label="Username" name="role" aria-describedby="basic-addon1"> </p>
 
         <button type="submit" class="button-login btn" name="registerBtn">Đăng Ký </button>
       

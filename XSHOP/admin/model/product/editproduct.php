@@ -1,7 +1,7 @@
 <?php
     include '../connect.php';
-    $id = $_GET['id'];
-    $sql = "SELECT * FROM `products` WHERE `id`='$id'";
+    $id = $_GET['id_product'];
+    $sql = "SELECT * FROM `products` WHERE `id_product`='$id'";
     $statement = $connect->prepare($sql);
     $statement->execute();
     
@@ -33,9 +33,9 @@
                 <li class="nav-item border rounded-3 border-dark m-1 bg-light"><a class="text-dark nav-link active" href=".../../../../public/Admin/html/index.php?act=act=listproduct">Danh mục</a></li>
                 <li class="nav-item border rounded-3 border-dark m-1 bg-light"><a class="text-dark nav-link active" href=".../../../../public/Admin/html/index.php?act=home">Trang chủ</a></li>
                 <li class="nav-item border rounded-3 border-dark m-1 bg-light"><a class="text-dark nav-link active" href=".../../../../public/Admin/html/index.php?act=product">Hàng hóa</a></li>
-                <li class="nav-item border rounded-3 border-dark m-1 bg-light"><a class="text-dark nav-link active" href="">Khách hàng</a></li>
-                <li class="nav-item border rounded-3 border-dark m-1 bg-light"><a class="text-dark nav-link active" href="">Bình luận</a></li>
-                <li class="nav-item border rounded-3 border-dark m-1 bg-light"><a class="text-dark nav-link active" href="">Thống kê</a></li>
+                <li class="nav-item border rounded-3 border-dark m-1 bg-light"><a class="text-dark nav-link active" href=".../../../../public/Admin/html/index.php?act=guest">Khách hàng</a></li>
+                <li class="nav-item border rounded-3 border-dark m-1 bg-light"><a class="text-dark nav-link active" href=".../../../../public/Admin/html/index.php?act=comment">Bình luận</a></li>
+                <li class="nav-item border rounded-3 border-dark m-1 bg-light"><a class="text-dark nav-link active" href=".../../../../public/Admin/html/index.php?act=thongke">Thống kê</a></li>
             </ul>
         </nav>
        <h2 class="text-center">
@@ -43,9 +43,9 @@
 </h2>  
       <form class="w-50 mx-auto" method="POST" action="editproduct_req.php" enctype="multipart/form-data">
   <div class="mb-3">
-    <input type="text" name="id" class="form-control" id="list-id" value="<?= $data['id_product']?>" hidden>
+    <input type="text" name="id_product" class="form-control" id="list-id" value="<?= $data['id_product']?>" hidden>
     <label for="list-name" class="form-label fs-4">Tên sản phẩm</label>
-    <input type="text" name="name" class="form-control" id="list-name" value="<?= $data['prd_name']?>">
+    <input type="text" name="prd_name" class="form-control" id="list-name" value="<?= $data['prd_name']?>">
     <label for="list-name" class="form-label fs-4">Tên loại</label>
     <br>
     <select name="id_type">
@@ -70,7 +70,7 @@
  
     <input type="text" name="view" class="form-control" id="list-name" value="<?= $data['view']?>">
     <label for="list-name" class="form-label fs-4">Ảnh</label>
-    <img src="../../public/Admin/image/<?= $data['img']?>" alt="">
+    <img width="320px" src="../../public/Admin/image/<?= $data['img']?>" alt="">
     <input type="file" name="img" class="form-control" id="list-name" value="">
   </div>
   

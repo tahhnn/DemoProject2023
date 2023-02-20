@@ -13,16 +13,16 @@
         <header class="text-center bg-dark"><h2 class="text-light p-3">Admin</h2></header>
         <nav class="navbar navbar-expand-lg bg-light">
             <ul class="navbar-nav mx-auto">
-                <li class="nav-item border rounded-3 border-dark m-1 bg-light"><a class="text-dark nav-link active" href="../../index.php?act=listproduct">Danh mục</a></li>
-                <li class="nav-item border rounded-3 border-dark m-1 bg-light"><a class="text-dark nav-link active" href="../../index.php">Trang chủ</a></li>
-                <li class="nav-item border rounded-3 border-dark m-1 bg-light"><a class="text-dark nav-link active" href="../../index.php?act=product">Sản phẩm</a></li>
-                <li class="nav-item border rounded-3 border-dark m-1 bg-light"><a class="text-dark nav-link active" href="../../index.php?act=customer">Khách hàng</a></li>
-                <li class="nav-item border rounded-3 border-dark m-1 bg-light"><a class="text-dark nav-link active" href="../../index.php?act=cmt">Bình luận</a></li>
-                <li class="nav-item border rounded-3 border-dark m-1 bg-light"><a class="text-dark nav-link active" href="../../index.php?act=">Thống kê</a></li>
+                <li class="nav-item border rounded-3 border-dark m-1 bg-light"><a class="text-dark nav-link active" href="../../public/Admin/html/index.php?act=listproduct">Danh mục</a></li>
+                <li class="nav-item border rounded-3 border-dark m-1 bg-light"><a class="text-dark nav-link active" href="../../public/Admin/html/index.php">Trang chủ</a></li>
+                <li class="nav-item border rounded-3 border-dark m-1 bg-light"><a class="text-dark nav-link active" href="../../public/Admin/html/index.php?act=product">Sản phẩm</a></li>
+                <li class="nav-item border rounded-3 border-dark m-1 bg-light"><a class="text-dark nav-link active" href="../../public/Admin/html/index.php?act=guest">Khách hàng</a></li>
+                <li class="nav-item border rounded-3 border-dark m-1 bg-light"><a class="text-dark nav-link active" href="../../public/Admin/html/index.php?act=comment">Bình luận</a></li>
+                <li class="nav-item border rounded-3 border-dark m-1 bg-light"><a class="text-dark nav-link active" href="../../public/Admin/html/index.php?act=thongke">Thống kê</a></li>
             </ul>
         </nav>
        <h2 class="text-center">
-           Thêm sản phẩm
+           Thêm Loại sản phẩm
 </h2>  
       <form class="w-50 mx-auto" method="POST" action="addNew-req.php">
   

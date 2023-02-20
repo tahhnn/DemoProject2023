@@ -13,20 +13,16 @@
                 case 'comment':
                     include './cmt/comment.php';
                     break;
+                case 'guest':
+                    include './guest/guest.php';
+                    break;
+                case 'thongke':
+                    include './thongke/thongke.php';
+                    break;
                 default:
                     include 'home.php';
                     break;
             }        
-
-
-
-
-
-
-
-
-
-
 
         }else{
 

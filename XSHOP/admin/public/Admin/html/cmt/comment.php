@@ -19,7 +19,7 @@
                             <td><?= $value['prd_name']?></td>
                             <td>
                                 <a  href="../../../model/comment/deletecmt.php?id_comment=<?=$value['id_comment']?>"><button class="btn-danger rounded border border-danger" onclick="return confirm('Bạn có muốn xóa không?')">Xóa</button></a>
-                                <a href=""><button class="btn-danger rounded border border-danger">Sửa</button></a>
+                               
                             </td>
                         </tr>
                   <?php  }

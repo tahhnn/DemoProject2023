@@ -18,7 +18,6 @@ $err ="";
         $status = $_POST['status'];
         $discount = $_POST['discount'];
         $view= $_POST['view'];
-
     }
 }
     if (isset($_POST['btn_submit']) && $err == "") {
@@ -57,7 +56,7 @@ $err ="";
 <form class="w-50 mx-auto" method="POST" enctype="multipart/form-data">
     <div>
         <label class="form-label fs-4">Name</label>
-        <input class="form-control" type="text" name="name" >
+        <input class="form-control" type="text" name="name">
         <span class="text-danger"><?=$err?></span>
     </div>
     <div>
