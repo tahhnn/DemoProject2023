@@ -49,22 +49,7 @@
                         echo "<a href='admin/model/checklogout.php' class='btn btn-primary'>ĐĂNG XUẤT</a>";
 
                         if($_SESSION['name'] == 'nguyenvana'){
-                            echo '<div class="div-login">
-                            <header> Tiến hành đăng nhập admin</header>
-                            <form action="admin/model/checkLogin.php" method="post">
-                                <p>Tên đăng nhập <input type="text" name="username" class="form-control" placeholder="Username"
-                                        aria-label="Username" aria-describedby="basic-addon1"> </p>
-                                <p> Mật khẩu <input type="text" name="pwd" class="form-control" placeholder="password"
-                                        aria-label="Username" aria-describedby="basic-addon1"> </p>
-        
-                                <p class="form-control"> <input class="input-checkbox" type="checkbox" name="" id="">Ghi nhớ tài khoản</p>
-                                <button type="submit" name="login" class="button-login btn">Đăng Nhập </button>
-                                <p>
-                                    <a href=""> Quên mật khẩu </a>
-                                </p>
-                                <p> <a href="index.php?act=new"> Đăng kí thành viên </a>
-                                </p>
-                        </div>';
+                            echo ' <pre></pre><a href="admin/public/Admin/html/index.php" class="btn btn-primary">Vào trang quản trị</a>';
 
                         }else{
                             echo '<pre></pre>';
@@ -94,7 +79,7 @@
                     <ul class="ul-list">
                       <?php
                             foreach ($data_product as $key => $value){ ?>
-                                <li class="li-list"> <a href=""> <?=$value['prd_name']?> </a></li>
+                                <li class="li-list"> <a href="admin/view/layout/html/demo-product.php?id_product=<?=$value['id_product']?>"> <?=$value['prd_name']?> </a></li>
                                 <hr>
 
                     <?php        }

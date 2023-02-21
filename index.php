@@ -5,19 +5,20 @@
         $username = $_POST['name'];
         $pwd = $_POST['pwd'];
         if(!$username || !$pwd){
-            echo "<script>alert('username hoặc password đang trống')</script>";
+            echo "<script>alert('username hoặc password đang trống')</script> <a href='javascript: history.go(-1)'>Trở lại</a>";
+            
             exit;
         }         
             $checkdata = "SELECT user, pwd FROM guest WHERE user = '$username' AND pwd = '$pwd' LIMIT 1";
             $statement_check = $connect->prepare($checkdata);
             $statement_check->execute();
         if($statement_check->rowCount() == 0){
-            echo"<script>alert('Tên đăng nhập không tồn tại')</script>";
+            echo"<script>alert('Tên đăng nhập không tồn tại')</script> <a href='javascript: history.go(-1)'>Trở lại</a>";
         exit;    
     }
         $data_check = $statement_check->fetch();
         if ($pwd != $data_check['pwd']) {
-            echo "<script>alert('Mật khẩu sai')</script>";
+            echo "<script>alert('Mật khẩu sai')</script> <a href='javascript: history.go(-1)'>Trở lại</a>";
 
         }
         $_SESSION['name'] = $username;
@@ -38,7 +39,7 @@
         <p> Mật khẩu <input type="password" class="form-control" placeholder="password"
                 aria-label="" name="pwd" aria-describedby="basic-addon1"> </p>
 
-        <button type="submit" class="button-login btn btn-danger" name="login">Đăng Ký </button>
+        <button type="submit" class="button-login btn btn-danger" name="login">Đăng Nhập </button>
       
 </div>
 </body>

@@ -64,31 +64,17 @@ session_start();
       </div>
     </div>
   </div>
+
             
-        </div>
-        
+        </div>        
         <div class="div-right-content">
         <?php       
                         echo "Xin chào" . " " .$_SESSION['name'];
-                        echo "<a href='admin/model/checklogout.php' class='btn btn-primary'>ĐĂNG XUẤT</a>";
+                        echo "<a href='../../../model/checklogout.php' class='btn btn-primary' onclick=\"return confirm('Bạn muốn đăng xuất ?')\" \">ĐĂNG XUẤT</a>";
 
                         if($_SESSION['name'] == 'nguyenvana'){
-                            echo '<div class="div-login">
-                            <header> Tiến hành đăng nhập admin</header>
-                            <form action="admin/model/checkLogin.php" method="post">
-                                <p>Tên đăng nhập <input type="text" name="username" class="form-control" placeholder="Username"
-                                        aria-label="Username" aria-describedby="basic-addon1"> </p>
-                                <p> Mật khẩu <input type="text" name="pwd" class="form-control" placeholder="password"
-                                        aria-label="Username" aria-describedby="basic-addon1"> </p>
-        
-                                <p class="form-control"> <input class="input-checkbox" type="checkbox" name="" id="">Ghi nhớ tài khoản</p>
-                                <button type="submit" name="login" class="button-login btn">Đăng Nhập </button>
-                                <p>
-                                    <a href=""> Quên mật khẩu </a>
-                                </p>
-                                <p> <a href="index.php?act=new"> Đăng kí thành viên </a>
-                                </p>
-                        </div>';
+                         
+                            echo ' <pre></pre><a href="../../../public/Admin/html/index.php" class="btn btn-primary">Vào trang quản trị</a>';
 
                         }else{
                             echo '<pre></pre>';
@@ -115,7 +101,7 @@ session_start();
                 <header> Top 10 yêu thích nhất </header>
                 <?php
                 foreach ($data_product as $keys => $values) { ?>
-                    <li class="li-list" style="padding: 10px;"><a style="padding: 10px" href=""><?=$values['prd_name']?></a></li>
+                    <li class="li-list" style="padding: 10px;"><a style="padding: 10px" href="../../../view/layout/html/demo-product.php?id_product=<?=$values['id_product']?>"><?=$values['prd_name']?></a></li>
                     <hr>
 
                 <?php        }
