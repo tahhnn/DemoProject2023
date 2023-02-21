@@ -1,10 +1,10 @@
 <h2 class="text-center p-2">
             Danh sách bình luận
 </h2>
-       <table class="table table-striped table-hover w-50 justify-content-center mx-auto">
+       <table class="table table-striped table-hover w-75 justify-content-center mx-auto">
             <thead>
-                <th>Mã loại</th>
-                <th>Tên loại</th>
+                <th>Mã bình luận</th>
+                <th>Tên khách hàng</th>
                 <th>Nội dung</th>
                 <th>Tên sản phẩm</th>
                 <th>Chức năng</th>     

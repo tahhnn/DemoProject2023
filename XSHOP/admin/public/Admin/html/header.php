@@ -3,7 +3,7 @@
     include '../../../model/loadProduct.php';
     include '../../../model/loadList_type.php';
     include '../../../model/LoadAllCmt.php';
-
+    include '../../../model/LoadGuest.php'
     ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,6 +18,7 @@
 <body>
     <div class="div-container">
         <header class="text-center bg-dark"><h2 class="text-light p-3">Admin</h2></header>
+        <a href="../../../../index.php">QUAY LẠI TRANG CHÍNH</a>
         <nav class="navbar navbar-expand-lg bg-light">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item border rounded-3 border-dark m-1 bg-light"><a class="text-dark nav-link active" href="../../../public/Admin/html/index.php?act=listproduct">Danh mục</a></li>
