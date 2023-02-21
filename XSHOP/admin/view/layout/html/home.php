@@ -2,7 +2,7 @@
     include 'admin/model/loadList_type.php';
     include 'admin/model/loadProduct.php';
     include 'admin/model/LoadGuest.php';
-    
+    session_start();
   
 
 ?>
@@ -43,24 +43,37 @@
                     <button class="button-list-product p-2 btn btn-primary">>></button>
                 </div>
             </div>
-
             <div class="div-right-content">
-                <div class="div-login">
-                    <header> TÀI KHOẢN </header>
-                    <form action="admin/model/checkLogin.php" method="post">
-                        <p>Tên đăng nhập <input type="text" name="username" class="form-control" placeholder="Username"
-                                aria-label="Username" aria-describedby="basic-addon1"> </p>
-                        <p> Mật khẩu <input type="text" name="pwd" class="form-control" placeholder="password"
-                                aria-label="Username" aria-describedby="basic-addon1"> </p>
+                <?php       
+                        echo "Xin chào" . " " .$_SESSION['name'];
+                        echo "<a href='admin/model/checklogout.php' class='btn btn-primary'>ĐĂNG XUẤT</a>";
 
-                        <p class="form-control"> <input class="input-checkbox" type="checkbox" name="" id="">Ghi nhớ tài khoản</p>
-                        <button type="submit" name="login" class="button-login btn">Đăng Nhập </button>
-                        <p>
-                            <a href=""> Quên mật khẩu </a>
-                        </p>
-                        <p> <a href="index.php?act=new"> Đăng kí thành viên </a>
-                        </p>
-                </div>
+                        if($_SESSION['name'] == 'nguyenvana'){
+                            echo '<div class="div-login">
+                            <header> Tiến hành đăng nhập admin</header>
+                            <form action="admin/model/checkLogin.php" method="post">
+                                <p>Tên đăng nhập <input type="text" name="username" class="form-control" placeholder="Username"
+                                        aria-label="Username" aria-describedby="basic-addon1"> </p>
+                                <p> Mật khẩu <input type="text" name="pwd" class="form-control" placeholder="password"
+                                        aria-label="Username" aria-describedby="basic-addon1"> </p>
+        
+                                <p class="form-control"> <input class="input-checkbox" type="checkbox" name="" id="">Ghi nhớ tài khoản</p>
+                                <button type="submit" name="login" class="button-login btn">Đăng Nhập </button>
+                                <p>
+                                    <a href=""> Quên mật khẩu </a>
+                                </p>
+                                <p> <a href="index.php?act=new"> Đăng kí thành viên </a>
+                                </p>
+                        </div>';
+
+                        }else{
+                            echo '<pre></pre>';
+                
+                            echo "Chào mừng bạn đến với gian hàng";
+                        }
+                    ?>
+                    
+                    
                 <div class="div-list">
                     <header> DANH MỤC </header>
                     <ul class="ul-list">
