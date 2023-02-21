@@ -67,19 +67,22 @@ include_once '../../../model/LoadComment.php';
         </div>
         
         <div class="div-right-content">
-            <div class="div-login">
-                <header> TÀI KHOẢN </header>
-                <form action="">
-                    <p>Tên đăng nhập <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1"> </p>
-                    <p> Mật khẩu <input type="text" class="form-control" placeholder="password" aria-label="Username" aria-describedby="basic-addon1"> </p>
-                    <p class="form-control"> <input class="input-checkbox" type="checkbox" name="" id="">Ghi nhớ tài khoản</p>
-                    <button type="submit" class="button-login ">Đăng Nhập </button>
-                    <p>
-                        <a href=""> Quên mật khẩu </a>
-                    </p>
-                    <p> <a href=""> Đăng kí thành viên </a>
-                    </p>
-            </div>
+        <div class="div-login">
+                    <header> TÀI KHOẢN </header>
+                    <form action="../../../model/checkLogin.php" method="post">
+                        <p>Tên đăng nhập <input type="text" name="username" class="form-control" placeholder="Username"
+                                aria-label="Username" aria-describedby="basic-addon1"> </p>
+                        <p> Mật khẩu <input type="text" name="pwd" class="form-control" placeholder="password"
+                                aria-label="Username" aria-describedby="basic-addon1"> </p>
+
+                        <p class="form-control"> <input class="input-checkbox" type="checkbox" name="" id="">Ghi nhớ tài khoản</p>
+                        <button type="submit" name="login" class="button-login btn">Đăng Nhập </button>
+                        <p>
+                            <a href=""> Quên mật khẩu </a>
+                        </p>
+                        <p> <a href="index.php?act=new"> Đăng kí thành viên </a>
+                        </p>
+                </div>
             <div class="div-list">
                 <header> DANH MỤC </header>
                 <ul class="ul-list">
@@ -114,7 +117,6 @@ include_once '../../../model/LoadComment.php';
         <div class="card">
           <div class="card-body p-4" style="width: 800px;">
             <h4>Bình Luận gần đây</h4>
-
             <div class="row">
               <div class="col">
                 <div class="d-flex flex-start">

@@ -1,7 +1,8 @@
 <?php
     include 'admin/model/loadList_type.php';
     include 'admin/model/loadProduct.php';
-
+    include 'admin/model/LoadGuest.php';
+    
   
 
 ?>
