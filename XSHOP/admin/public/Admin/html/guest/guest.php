@@ -24,5 +24,4 @@
                
             </tbody>
        </tablte>
-       <a class="d-flex justify-content-center" style="text-decoration: none;" href="../../../model/list/addNew.php"><button type="button" class="btn btn-outline-warning">Thêm mới</button></a>
     </div>

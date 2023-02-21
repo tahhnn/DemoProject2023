@@ -13,13 +13,6 @@
         $data = $statement->fetch();
         $role = $data['role'];
         $_SESSION['role'] = $role;
-        if($role == 1) {
-            header('location: ../public/Admin/html/index.php');
-        }else if($role == 0) {
-            header('location:../../index.php');
-        }
-
- 
-   
+        
     }
     ?> 

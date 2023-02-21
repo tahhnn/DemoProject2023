@@ -5,5 +5,5 @@
     $statement_product= $connect->prepare($sql_product);
     $statement_product->execute();
     $data_1product = $statement_product->fetch();
-  
+    
 ?>

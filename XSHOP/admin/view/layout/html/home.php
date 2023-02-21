@@ -3,8 +3,7 @@
     include 'admin/model/loadProduct.php';
     include 'admin/model/LoadGuest.php';
     session_start();
-  
-
+    
 ?>
 <div class="div-content">
             <div class="div-content-left">
@@ -46,9 +45,11 @@
             <div class="div-right-content">
                 <?php       
                         echo "Xin chào" . " " .$_SESSION['name'];
+                        
                         echo "<a href='admin/model/checklogout.php' class='btn btn-primary'>ĐĂNG XUẤT</a>";
 
-                        if($_SESSION['name'] == 'nguyenvana'){
+                        if($_SESSION['name'] === 'nguyenvana' || $_SESSION['name'] === 'buichithanh'){
+
                             echo ' <pre></pre><a href="admin/public/Admin/html/index.php" class="btn btn-primary">Vào trang quản trị</a>';
 
                         }else{
