@@ -6,8 +6,6 @@ include '../../../model/loadGuest.php';
 include_once '../../../model/LoadComment.php';
 
 session_start();
-var_dump($_SESSION)
-
 ?>
 
 <!DOCTYPE html>
@@ -145,6 +143,7 @@ var_dump($_SESSION)
                 </div>
                 <form class="form-cmt" action="../../../model/comment/addcmt.php" method="POST" enctype="multipart/form-data">
                     <input type="text" name="id_product" value="<?=$data_1product['id_product']?>" hidden>
+                    <input type="text" name="id_guest" value="<?=$_SESSION['id_guest']?>" hidden>
                     <label class="form-label pt-4" for="">Bình luận của <?=$_SESSION['name']?> :</label>
                         <input type="text" name="name" value="<?=$_SESSION['name']?>" hidden>
                         <input class="form-control mb-3" name="comment" style="width: 300px;" type="text" placeholder="Comment.....">

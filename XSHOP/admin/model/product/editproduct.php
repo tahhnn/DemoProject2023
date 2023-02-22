@@ -6,7 +6,6 @@
     $statement->execute();
     
     $data = $statement->fetch();
-
     $sql_type = "SELECT * FROM `type`";
     $statement_type = $connect->prepare($sql_type);
     $statement_type->execute();
@@ -71,10 +70,10 @@
     <input type="text" name="view" class="form-control" id="list-name" value="<?= $data['view']?>">
     <label for="list-name" class="form-label fs-4">Ảnh</label>
     <img width="320px" src="../../public/Admin/image/<?= $data['img']?>" alt="">
-    <input type="file" name="img" class="form-control" id="list-name" value="">
+    <input type="file" name="img" class="form-control" id="list-name" value="<?= $data['img']?>">
   </div>
   
-  <button type="submit" class="btn btn-outline-warning">Thêm mới</button>
+  <button type="submit" class="btn btn-outline-warning">Sửa</button>
 </form>
       
     </div>

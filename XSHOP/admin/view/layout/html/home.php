@@ -48,7 +48,8 @@
                         
                         echo "<a href='admin/model/checklogout.php' class='btn btn-primary'>ĐĂNG XUẤT</a>";
 
-                        if($_SESSION['name'] === 'nguyenvana' || $_SESSION['name'] === 'buichithanh'){
+                        if($_SESSION['role'] === 1){
+                            echo "<a href='index.php?act=new' class='btn btn-primary mx-4'>Đăng ký</a>";
 
                             echo ' <pre></pre><a href="admin/public/Admin/html/index.php" class="btn btn-primary">Vào trang quản trị</a>';
 

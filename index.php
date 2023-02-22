@@ -9,7 +9,7 @@
             
             exit;
         }         
-            $checkdata = "SELECT user, pwd FROM guest WHERE user = '$username' AND pwd = '$pwd' LIMIT 1";
+            $checkdata = "SELECT user, pwd, role,id_guest FROM guest WHERE user = '$username' AND pwd = '$pwd' LIMIT 1";
             $statement_check = $connect->prepare($checkdata);
             $statement_check->execute();
         if($statement_check->rowCount() == 0){
@@ -22,6 +22,11 @@
 
         }
         $_SESSION['name'] = $username;
+        $_SESSION['role'] = $data_check['role'];
+        $_SESSION['id_guest'] = $data_check['id_guest'];
+
+        
+
         echo "Xin chào " . $username . ". Bạn đã đăng nhập thành công. <a href='XSHOP/index.php'>Về trang chủ</a>";
         die();
 }

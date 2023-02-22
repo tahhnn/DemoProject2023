@@ -3,6 +3,7 @@
     include '../../../model/loadProduct.php';
     include '../../../model/loadList_type.php';
     include '../../../model/LoadAllCmt.php';
+    include '../../../model/LoadGuest.php';
     session_start();
     ?>
 <!DOCTYPE html>

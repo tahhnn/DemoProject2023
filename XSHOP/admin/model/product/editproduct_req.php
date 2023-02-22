@@ -1,12 +1,20 @@
 <?php
     include '../connect.php';
     include '../loadProduct.php';
+    
     $id = isset($_POST['id_product']) ? $_POST['id_product'] : '';
- 
+
     $name = isset($_POST['prd_name']) ? $_POST['prd_name'] : '';
+
+
+    $sql_product = "SELECT * FROM products WHERE id_product = $id";
+    $statement_product= $connect->prepare($sql_product);
+    $statement_product->execute();
+    $data_1product = $statement_product->fetch();
+    
     if ($_FILES['img']['name'] == '') {
         # code...
-        $img=$data_product['img'];
+        $img=$data_1product['img'];
     }else{
         $img=$_FILES['img']['name'];
         $img_tmp=$_FILES['img']['tmp_name'];
@@ -26,3 +34,4 @@
         $statement_update->execute();
         move_uploaded_file($img_tmp,'../../public/Admin/image/'.$img);
     header('location:../../public/Admin/html/index.php?act=product');
+?>
