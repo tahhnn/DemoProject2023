@@ -20,9 +20,9 @@ if (isset($_POST['registerBtn'])){
 <div class="div-login my-5 w-25 mx-auto rounded-1 border-success border-5 p-3 h-100">
     <header class="w-100 bg-success"> TÀI KHOẢN </header>
     <form class="w-50 mx-auto my-5" action="<?php ($_SERVER['PHP_SELF'])?>" method="POST">
-        <p>Tên đăng nhập <input type="text" class="form-control" placeholder="Username"
+        <p>Tên  <input type="text" class="form-control" placeholder="Username"
                 aria-label="Username" aria-describedby="basic-addon1" name="name"> </p>
-        <p>Tên user <input type="text" class="form-control" 
+        <p>Tên đăng nhập <input type="text" class="form-control" 
                  name="user"> </p>
         <p> Mật khẩu <input type="password" class="form-control" placeholder="password"
                 aria-label="Username" name="pwd" aria-describedby="basic-addon1"> </p>

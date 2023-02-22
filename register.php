@@ -1,72 +1,34 @@
 <?php
-session_start();
+include 'XSHOP/admin/model/connect.php';
+if (isset($_POST['registerBtn'])) {
 
-$username = $password = '';
-$error = array();
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_POST['login'])) {
-        include 'XSHOP/admin/model/connect.php';
-
-
-        if (empty($_POST["name"])) {
-            $error['name'] = 'Tên đăng nhập không được để trống';
-        } else {
-            $username = $_POST['name'];
-        }
-
-        if (empty($_POST["password"])) {
-            $error['password'] = 'Mật khẩu không được để trống';
-        } else {
-            $password = $_POST["password"];
-        }
-
-        // if (!$username || !$pwd) {
-        //     echo "<script>alert('username hoặc password đang trống')</script> <a href='javascript: history.go(-1)'>Trở lại</a>";
-
-        //     exit;
-        // }
+    $username = $_POST['user'];
+    $name = $_POST['name'];
+    $password = $_POST['password'];
+    $role = $_POST['role'];
+    $sql = "INSERT INTO guest (`name`,`user`, `pwd`,`role`) VALUES ('$name','$username', '$password',$role)";
+    $statement = $connect->prepare($sql);
+    $statement->execute();
+    echo 'Đăng ký thành công!';
+    header('location:index.php');
+    // if ($statement_check->rowCount() > 0) {
+    //     $error['login'] = 'Đăng nhập thành công';
 
 
-        $checkdata = "SELECT name, user, pwd, role, id_guest FROM guest WHERE user = '$username' AND pwd = '$password' LIMIT 1";
 
-        $statement_check = $connect->prepare($checkdata);
-        $statement_check->execute();
-        $data_check = $statement_check->fetch();
-        
-            if( $password = $_POST["password"] && $username = $_POST['name']){
-                if ($data_check['pwd'] == $password && $data_check['user'] == $username && $statement_check->rowCount() > 0) {
-                    $loginSuccess = 'Đăng nhập thành công';
-                   
-                    $_SESSION['role'] = $data_check['role'];
-                    $_SESSION['id_guest'] = $data_check['id_guest'];
-                    
-                    $_SESSION['user'] = $data_check['name'];
-
-                    header("refresh:2;url=XSHOP/index.php");
-                } else {
-                    $error['login'] = 'Tài khoản hoặc mật khẩu không đúng';
-                }
-            }
-
-        // if ($statement_check->rowCount() > 0) {
-        //     $error['login'] = 'Đăng nhập thành công';
-
-    
-
-        //     // header("refresh:5;url=https://www.google.com.vn/");
-        // } else {
-        //     $error['login'] = 'Tài khoản hoặc mật khẩu không đúng';
-        // }
+    //     // header("refresh:5;url=https://www.google.com.vn/");
+    // } else {
+    //     $error['login'] = 'Tài khoản hoặc mật khẩu không đúng';
+    // }
 
 
-        // if ($pwd != $data_check['pwd']) {
-        //     echo "<script>alert('Mật khẩu sai')</script> <a href='javascript: history.go(-1)'>Trở lại</a>";
-        // }
-    }
+    // if ($pwd != $data_check['pwd']) {
+    //     echo "<script>alert('Mật khẩu sai')</script> <a href='javascript: history.go(-1)'>Trở lại</a>";
+    // }
 }
-
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -122,7 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="col-lg-4 p-3 my-5 login-container">
                 <div class="">
                     <div class="text-center">
-                        <h4>Đăng nhập</h4>
+                        <h4>Đăng ký</h4>
                     </div>
 
                     <?php
@@ -147,28 +109,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     <form action="#" method="POST">
                         <div class="form-group mt-4">
-                            <label for="title" class="form-label px-3">Tên đăng nhập</label>
-                            <input type="text" class="form-control login-input" name="name" placeholder="Tài khoản đăng nhập ...">
+                            <label for="title" class="form-label px-3">Tên của bạn</label>
+                            <input type="text" class="form-control login-input" name="name" placeholder="Tên của bạn...">
                             <span class="text-danger px-3 " style="font-size: 16px"><?php if (isset($error['name'])) echo $error['name'] ?></span>
                         </div>
 
+                        <div class="form-group mt-1">
+                            <label for="title" class="form-label px-3">Tên đăng nhập</label>
+                            <input type="text" class="form-control login-input" name="user" placeholder="Tài khoản đăng nhập ... ">
+                             <span class="text-danger px-3" style="font-size: 16px"><?php if (isset($error['password'])) echo $error['password'] ?></span>
+                        </div>
                         <div class="form-group mt-1">
                             <label for="title" class="form-label px-3">Mật khẩu</label>
                             <input type="password" class="form-control login-input" name="password" placeholder="Mật khẩu ...">
                             <span class="text-danger px-3" style="font-size: 16px"><?php if (isset($error['password'])) echo $error['password'] ?></span>
                         </div>
-
+                        <select name="role" class="form-select" id="">Phân quyền
+                            <option value="1">Admin</option>
+                            <option value="0">Khách</option>
+                        </select>
                         <div class="form-group mt-3 text-center">
-                            <input type="submit" class="button-login btn btn-praimary" name="login" value="Đăng nhập">
+                            <input type="submit" class="button-login btn btn-praimary" name="registerBtn" value="Đăng ký">
                         </div>
-
                     </form>
-                    <div class="text-center">
-                        <a class="small" href="#">Forgot Password?</a>
-                    </div>
-                    <div class="text-center">
-                    <a class="small" href="register.php">Create an Account!</a>
-                    </div>
+
                 </div>
             </div>
         </div>

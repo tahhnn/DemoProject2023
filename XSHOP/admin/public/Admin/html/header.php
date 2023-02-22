@@ -18,7 +18,7 @@
 </head>
 <body>
     <div class="div-container">
-        <header class="text-center bg-dark"><h2 class="text-light p-3">Admin <?=$_SESSION['name']?></h2></header>
+        <header class="text-center bg-dark"><h2 class="text-light p-3">Admin <?=$_SESSION['user']?></h2></header>
         <a href="../../../../index.php">QUAY LẠI TRANG CHÍNH</a>
         <nav class="navbar navbar-expand-lg bg-light">
             <ul class="navbar-nav mx-auto">

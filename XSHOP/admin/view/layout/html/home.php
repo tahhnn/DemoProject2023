@@ -27,7 +27,7 @@
                                  <p class="price_text">Price  <span style="color: #262626;"><?=$val['price']?></span></p>
                                  <div class="tshirt_img"><img width="120" src="admin/public/Admin/image/<?=$val['img']?>"></div>
                                  <div class="btn_main">
-                                    <div class="buy_bt"><a href="admin/view/layout/html/loadCmt.php?id_product=<?=$val['id_product']?>">Buy Now</a></div>
+                                    <div class="buy_bt"><a href="admin/view/layout/html/demo-product.php?id_product=<?=$val['id_product']?>">Buy Now</a></div>
                                     <div class="seemore_bt"><a href="admin/view/layout/html/demo-product.php?id_product=<?=$val['id_product']?>">See More</a></div>
                                  </div>
                               </div>
@@ -44,7 +44,7 @@
             </div>
             <div class="div-right-content">
                 <?php       
-                        echo "Xin chào" . " " .$_SESSION['name'];
+                        echo "Xin chào" . " " . $_SESSION['user'];
                         
                         echo "<a href='admin/model/checklogout.php' class='btn btn-primary'>ĐĂNG XUẤT</a>";
 

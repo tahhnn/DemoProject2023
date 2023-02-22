@@ -71,10 +71,10 @@ session_start();
         </div>        
         <div class="div-right-content">
         <?php       
-                        echo "Xin chào" . " " .$_SESSION['name'];
+                        echo "Xin chào" . " " .$_SESSION['user'];
                         echo "<a href='../../../model/checklogout.php' class='btn btn-primary' onclick=\"return confirm('Bạn muốn đăng xuất ?')\" \">ĐĂNG XUẤT</a>";
 
-                        if($_SESSION['name'] == 'nguyenvana'){
+                        if($_SESSION['role'] == 1){
                          
                             echo ' <pre></pre><a href="../../../public/Admin/html/index.php" class="btn btn-primary">Vào trang quản trị</a>';
 
@@ -144,7 +144,7 @@ session_start();
                 <form class="form-cmt" action="../../../model/comment/addcmt.php" method="POST" enctype="multipart/form-data">
                     <input type="text" name="id_product" value="<?=$data_1product['id_product']?>" hidden>
                     <input type="text" name="id_guest" value="<?=$_SESSION['id_guest']?>" hidden>
-                    <label class="form-label pt-4" for="">Bình luận của <?=$_SESSION['name']?> :</label>
+                    <label class="form-label pt-4" for="">Bình luận của <?=$_SESSION['user']?> :</label>
                         <input type="text" name="name" value="<?=$_SESSION['name']?>" hidden>
                         <input class="form-control mb-3" name="comment" style="width: 300px;" type="text" placeholder="Comment.....">
                         <button class="btn btn-primary" type="submit">Gửi</button>
