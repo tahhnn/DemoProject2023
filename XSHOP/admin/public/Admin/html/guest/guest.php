@@ -16,7 +16,12 @@
                             <td><?= $value['name']?></td>
                             <td><?= $value['role']?></td>
                             <td>
-                                <a  href="../../../model/guest/deleteguest.php?id_type=<?=$value['id_guest']?>"><button class="btn-danger rounded border border-danger" onclick="return confirm('Bạn có muốn xóa không?')">Xóa</button></a>
+                                <?php if($value['role'] != $_SESSION['role'] || $value['user']!= $_SESSION['name']) {
+
+                                    echo '<a  href="../../../model/guest/deleteguest.php?id_type=<?=$value[\'id_guest\']?>\"><button class="btn-danger rounded border border-danger" onclick="return confirm(\'Bạn có muốn xóa không?\')\">Xóa</button></a>';
+                                    
+                                }?>
+
                             </td>
                         </tr>
                   <?php  }
