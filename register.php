@@ -125,7 +125,7 @@ if (isset($_POST['registerBtn'])) {
                             <span class="text-danger px-3" style="font-size: 16px"><?php if (isset($error['password'])) echo $error['password'] ?></span>
                         </div>
                         <select name="role" class="form-select" id="">Phân quyền
-                            <option value="1">Admin</option>
+                            
                             <option value="0">Khách</option>
                         </select>
                         <div class="form-group mt-3 text-center">

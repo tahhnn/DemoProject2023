@@ -42,6 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $_SESSION['id_guest'] = $data_check['id_guest'];
                     
                     $_SESSION['user'] = $data_check['name'];
+                    $_SESSION['name'] = $data_check['user'];
 
                     header("refresh:2;url=XSHOP/index.php");
                 } else {
