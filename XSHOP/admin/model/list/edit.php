@@ -44,7 +44,7 @@
     <input type="text" name="name" class="form-control" id="list-name" value="<?= $data['name']?>">
   </div>
   
-  <button type="submit" class="btn btn-outline-warning">Thêm mới</button>
+  <button type="submit" class="btn btn-outline-warning">Sửa</button>
 </form>
       
     </div>

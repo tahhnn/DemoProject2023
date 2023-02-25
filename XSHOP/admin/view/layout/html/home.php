@@ -46,6 +46,7 @@
                 <?php       
                         echo "Xin chào" . " " . $_SESSION['user'];
                         
+                        echo '<br>';
                         echo "<a href='admin/model/checklogout.php' class='btn btn-primary'>ĐĂNG XUẤT</a>";
 
                         if($_SESSION['role'] === 1){
