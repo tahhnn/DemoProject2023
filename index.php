@@ -7,8 +7,6 @@ $error = array();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['login'])) {
         include 'XSHOP/admin/model/connect.php';
-
-
         if (empty($_POST["name"])) {
             $error['name'] = 'Tên đăng nhập không được để trống';
         } else {
@@ -33,27 +31,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $statement_check = $connect->prepare($checkdata);
         $statement_check->execute();
         $data_check = $statement_check->fetch();
-        
-            if( $password = $_POST["password"] && $username = $_POST['name']){
-                if ($data_check['pwd'] == $password && $data_check['user'] == $username && $statement_check->rowCount() > 0) {
-                    $loginSuccess = 'Đăng nhập thành công';
-                   
-                    $_SESSION['role'] = $data_check['role'];
-                    $_SESSION['id_guest'] = $data_check['id_guest'];
-                    
-                    $_SESSION['user'] = $data_check['name'];
-                    $_SESSION['name'] = $data_check['user'];
 
-                    header("refresh:2;url=XSHOP/index.php");
-                } else {
-                    $error['login'] = 'Tài khoản hoặc mật khẩu không đúng';
-                }
-            }
+        // if( $password = $_POST["password"] && $username = $_POST['name']){
+        if ($statement_check->rowCount() > 0) {
+            $loginSuccess = 'Đăng nhập thành công';
+            $_SESSION['role'] = $data_check['role'];
+            $_SESSION['id_guest'] = $data_check['id_guest'];
+
+            $_SESSION['user'] = $data_check['name'];
+            $_SESSION['name'] = $data_check['user'];
+
+            header("refresh:1;url=XSHOP/index.php");
+        } else {
+            $error['login'] = 'Tài khoản hoặc mật khẩu không đúng';
+        }
+        //  }
 
         // if ($statement_check->rowCount() > 0) {
         //     $error['login'] = 'Đăng nhập thành công';
 
-    
+
 
         //     // header("refresh:5;url=https://www.google.com.vn/");
         // } else {
@@ -168,7 +165,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <a class="small" href="#">Forgot Password?</a>
                     </div>
                     <div class="text-center">
-                    <a class="small" href="register.php">Create an Account!</a>
+                        <a class="small" href="register.php">Create an Account!</a>
                     </div>
                 </div>
             </div>
